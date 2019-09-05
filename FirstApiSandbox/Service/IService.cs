@@ -11,7 +11,7 @@ namespace FirstApiSandbox.Service
         List<Book> GetBooksfromService();
         Book GetBooksFromDatabaseAtIndex(int id);
         void AddBookUsingService(Book newBook);
-        void UpdateBookUsingService(int id, Book newBook);
-        void DeleteBookUsingService(int id);
+        bool UpdateBookUsingService(int id, Book newBook);
+        bool DeleteBookUsingService(int id);
     }
 }

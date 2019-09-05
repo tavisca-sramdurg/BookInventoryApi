@@ -22,9 +22,15 @@ namespace FirstApiSandbox.Controllers
 
         // GET: api/Book/5
         [HttpGet("{id}", Name = "Get")]
-        public Book Get(int id)
+        public ActionResult<Book> Get(int id)
         {
-            return bookService.GetBooksFromDatabaseAtIndex(id);
+            var returnedBook = bookService.GetBooksFromDatabaseAtIndex(id);
+            if(returnedBook != null)
+            {
+                return Ok(returnedBook);
+            }
+
+            return NotFound("Book that you're looking for does not exist");
         }
 
         // POST: api/Book
@@ -36,16 +42,24 @@ namespace FirstApiSandbox.Controllers
 
         // PUT: api/Book/5
         [HttpPut("{id}")]
-        public void Put(int id, [FromBody] Book newBook)
+        public ActionResult Put(int id, [FromBody] Book newBook)
         {
-            bookService.UpdateBookUsingService(id, newBook);
+            if (bookService.UpdateBookUsingService(id, newBook))
+                return Ok(bookService.GetBooksFromDatabaseAtIndex(id));
+
+            return NotFound();
+            //bookService.UpdateBookUsingService(id, newBook);
         }
 
         // DELETE: api/ApiWithActions/5
         [HttpDelete("{id}")]
-        public void Delete(int id)
+        public ActionResult Delete(int id)
         {
-            bookService.DeleteBookUsingService(id);
+            if (bookService.DeleteBookUsingService(id))
+            {
+                return Ok();
+            }
+            return NotFound();
         }
     }
 }

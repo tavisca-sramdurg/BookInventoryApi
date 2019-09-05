@@ -19,7 +19,15 @@ namespace FirstApiSandbox.Database
 
         public Book GetBooksFromDatabaseAtIndex(int id)
         {
-            return bookList.ElementAt(id);
+            try
+            {
+                return bookList.ElementAt(id);
+            }
+            catch(Exception)
+            {
+                return null;
+            }
+            
         }
 
         public void AddBookInDatabase(Book newBook)
@@ -27,16 +35,34 @@ namespace FirstApiSandbox.Database
             bookList.Add(newBook);
         }
 
-        public void UpdateBookInDatabase(int id, Book newBook)
+        public bool UpdateBookInDatabase(int id, Book newBook)
         {
-            bookList[id].Name = newBook.Name;
-            bookList[id].Genre = newBook.Genre;
-            bookList[id].Author = newBook.Author;
+            try
+            {
+                bookList[id].Name = newBook.Name;
+                bookList[id].Genre = newBook.Genre;
+                bookList[id].Author = newBook.Author;
+                return true;
+            }
+            catch (Exception)
+            {
+                return false;
+            }
+            
         }
 
-        public void DeleteBookFromDatabase(int id)
+        public bool DeleteBookFromDatabase(int id)
         {
-            bookList.RemoveAt(id);
+            try
+            {
+                bookList.RemoveAt(id);
+                return true;
+            }
+            catch (Exception)
+            {
+                return false;
+            }
+            
         }
     }
 }

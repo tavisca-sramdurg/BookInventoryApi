@@ -26,16 +26,18 @@ namespace FirstApiSandbox.Service
             BookData.bookList.Add(newBook);
         }
 
-        public void UpdateBookUsingService(int id, Book newBook)
+        public bool UpdateBookUsingService(int id, Book newBook)
         {
-            BookData.bookList[id].Name = newBook.Name;
-            BookData.bookList[id].Genre = newBook.Genre;
-            BookData.bookList[id].Author = newBook.Author;
+            if (id < 0)
+                return false;
+            return bookData.UpdateBookInDatabase(id, newBook);
         }
 
-        public void DeleteBookUsingService(int id)
+        public bool DeleteBookUsingService(int id)
         {
-            BookData.bookList.RemoveAt(id);
+            if (id < 0)
+                return false;
+            return bookData.DeleteBookFromDatabase(id);
         }
 
     }
