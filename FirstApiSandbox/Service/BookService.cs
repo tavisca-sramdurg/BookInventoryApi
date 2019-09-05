@@ -16,6 +16,10 @@ namespace FirstApiSandbox.Service
             return bookData.GetBooksFromDatabase();
         }
 
+        public Book GetBooksFromDatabaseAtIndex(int id)
+        {
+            return bookData.GetBooksFromDatabaseAtIndex(id);
+        }
 
         public void AddBookUsingService(Book newBook)
         {

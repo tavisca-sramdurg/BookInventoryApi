@@ -17,6 +17,11 @@ namespace FirstApiSandbox.Database
             return bookList;
         }
 
+        public Book GetBooksFromDatabaseAtIndex(int id)
+        {
+            return bookList.ElementAt(id);
+        }
+
         public void AddBookInDatabase(Book newBook)
         {
             bookList.Add(newBook);

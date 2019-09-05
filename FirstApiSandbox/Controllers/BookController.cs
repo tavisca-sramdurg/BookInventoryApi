@@ -16,7 +16,7 @@ namespace FirstApiSandbox.Controllers
         //    new Book { Name = "Da VinciCode", Genre = "Fiction", Author = "Dan Brown" }
         //};
 
-        BookService bookService = new BookService();
+        IService bookService = new BookService();
 
         // GET: api/Book
         [HttpGet]
@@ -28,11 +28,11 @@ namespace FirstApiSandbox.Controllers
 
         // GET: api/Book/5
         [HttpGet("{id}", Name = "Get")]
-        //public Book Get(int id)
-        //{
-        //    //return bookList.ElementAt(id);
-
-        //}
+        public Book Get(int id)
+        {
+            //return bookList.ElementAt(id);
+            return bookService.GetBooksFromDatabaseAtIndex(id);
+        }
 
         // POST: api/Book
         [HttpPost]
