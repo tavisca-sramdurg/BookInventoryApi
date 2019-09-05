@@ -19,17 +19,19 @@ namespace FirstApiSandbox.Service
 
         public void AddBookUsingService(Book newBook)
         {
-            throw new NotImplementedException();
+            BookData.bookList.Add(newBook);
         }
 
         public void UpdateBookUsingService(int id, Book newBook)
         {
-            throw new NotImplementedException();
+            BookData.bookList[id].Name = newBook.Name;
+            BookData.bookList[id].Genre = newBook.Genre;
+            BookData.bookList[id].Author = newBook.Author;
         }
 
         public void DeleteBookUsingService(int id)
         {
-            throw new NotImplementedException();
+            BookData.bookList.RemoveAt(id);
         }
 
     }
