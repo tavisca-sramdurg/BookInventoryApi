@@ -21,11 +21,24 @@ namespace FirstApiSandbox.Controllers
         }
 
         // GET: api/Book/5
-        [HttpGet("{id}", Name = "Get")]
-        public ActionResult<Book> Get(int id)
+        //[HttpGet("{id}", Name = "Get")]
+        //public ActionResult<Book> Get(int id)
+        //{
+        //    var returnedBook = bookService.GetBooksFromDatabaseAtIndex(id);
+        //    if(returnedBook != null)
+        //    {
+        //        return Ok(returnedBook);
+        //    }
+
+        //    return NotFound("Book that you're looking for does not exist");
+        //}
+
+        // GET: api/Book/5
+        [HttpGet("{name}", Name = "Get")]
+        public ActionResult<Book> Get(string name)
         {
-            var returnedBook = bookService.GetBooksFromDatabaseAtIndex(id);
-            if(returnedBook != null)
+            var returnedBook = bookService.GetBookFromServiceByName(name);
+            if (returnedBook != null)
             {
                 return Ok(returnedBook);
             }
@@ -41,21 +54,21 @@ namespace FirstApiSandbox.Controllers
         }
 
         // PUT: api/Book/5
-        [HttpPut("{id}")]
-        public ActionResult Put(int id, [FromBody] Book newBook)
+        [HttpPut("{name}")]
+        public ActionResult Put(string name, [FromBody] Book newBook)
         {
-            if (bookService.UpdateBookUsingService(id, newBook))
-                return Ok(bookService.GetBooksFromDatabaseAtIndex(id));
+            if (bookService.UpdateBookUsingService(name, newBook))
+                return Ok(bookService.GetBookFromServiceByName(name));
 
             return NotFound();
             //bookService.UpdateBookUsingService(id, newBook);
         }
 
         // DELETE: api/ApiWithActions/5
-        [HttpDelete("{id}")]
-        public ActionResult Delete(int id)
+        [HttpDelete("{name}")]
+        public ActionResult Delete(string name)
         {
-            if (bookService.DeleteBookUsingService(id))
+            if (bookService.DeleteBookUsingService(name))
             {
                 return Ok();
             }

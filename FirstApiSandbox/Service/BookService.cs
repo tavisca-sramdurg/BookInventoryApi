@@ -16,9 +16,9 @@ namespace FirstApiSandbox.Service
             return bookData.GetBooksFromDatabase();
         }
 
-        public Book GetBooksFromDatabaseAtIndex(int id)
+        public Book GetBookFromServiceByName(string name)
         {
-            return bookData.GetBooksFromDatabaseAtIndex(id);
+            return bookData.GetBooksFromDatabaseAtIndex(name);
         }
 
         public void AddBookUsingService(Book newBook)
@@ -26,18 +26,18 @@ namespace FirstApiSandbox.Service
             BookData.bookList.Add(newBook);
         }
 
-        public bool UpdateBookUsingService(int id, Book newBook)
+        public bool UpdateBookUsingService(string name, Book newBook)
         {
-            if (id < 0)
+            if (name == "")
                 return false;
-            return bookData.UpdateBookInDatabase(id, newBook);
+            return bookData.UpdateBookInDatabase(name, newBook);
         }
 
-        public bool DeleteBookUsingService(int id)
+        public bool DeleteBookUsingService(string name)
         {
-            if (id < 0)
+            if (name == "")
                 return false;
-            return bookData.DeleteBookFromDatabase(id);
+            return bookData.DeleteBookFromDatabase(name);
         }
 
     }

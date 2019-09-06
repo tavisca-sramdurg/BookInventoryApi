@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Linq;
 using System.Threading.Tasks;
 using FirstApiSandbox.Model;
@@ -17,17 +18,13 @@ namespace FirstApiSandbox.Database
             return bookList;
         }
 
-        public Book GetBooksFromDatabaseAtIndex(int id)
+        public Book GetBooksFromDatabaseAtIndex(string name)
         {
-            try
-            {
-                return bookList.ElementAt(id);
-            }
-            catch(Exception)
-            {
-                return null;
-            }
-            
+            Debug.WriteLine(name);
+
+            var bookToBeReturned = bookList.Where(iteratorBook => iteratorBook.Name.Equals(name)).FirstOrDefault();
+            Debug.WriteLine(bookToBeReturned);
+            return bookToBeReturned;
         }
 
         public void AddBookInDatabase(Book newBook)
@@ -35,13 +32,14 @@ namespace FirstApiSandbox.Database
             bookList.Add(newBook);
         }
 
-        public bool UpdateBookInDatabase(int id, Book newBook)
+        public bool UpdateBookInDatabase(string name, Book newBook)
         {
             try
             {
-                bookList[id].Name = newBook.Name;
-                bookList[id].Genre = newBook.Genre;
-                bookList[id].Author = newBook.Author;
+                bookList[bookList.IndexOf(bookList.Where(iteratorBook => iteratorBook.Name == name).FirstOrDefault())].Author = newBook.Author;
+                bookList[bookList.IndexOf(bookList.Where(iteratorBook => iteratorBook.Name == name).FirstOrDefault())].Genre = newBook.Genre;
+                bookList[bookList.IndexOf(bookList.Where(iteratorBook => iteratorBook.Name == name).FirstOrDefault())].Name = newBook.Name;
+
                 return true;
             }
             catch (Exception)
@@ -51,11 +49,11 @@ namespace FirstApiSandbox.Database
             
         }
 
-        public bool DeleteBookFromDatabase(int id)
+        public bool DeleteBookFromDatabase(string name)
         {
             try
             {
-                bookList.RemoveAt(id);
+                bookList.RemoveAt(bookList.IndexOf(bookList.Where(iteratorBook => iteratorBook.Name == name).FirstOrDefault()));
                 return true;
             }
             catch (Exception)

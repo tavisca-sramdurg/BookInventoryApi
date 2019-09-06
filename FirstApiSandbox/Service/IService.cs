@@ -9,9 +9,9 @@ namespace FirstApiSandbox.Service
     public interface IService
     {
         List<Book> GetBooksfromService();
-        Book GetBooksFromDatabaseAtIndex(int id);
+        Book GetBookFromServiceByName(string name);
         void AddBookUsingService(Book newBook);
-        bool UpdateBookUsingService(int id, Book newBook);
-        bool DeleteBookUsingService(int id);
+        bool UpdateBookUsingService(string name, Book newBook);
+        bool DeleteBookUsingService(string name);
     }
 }
