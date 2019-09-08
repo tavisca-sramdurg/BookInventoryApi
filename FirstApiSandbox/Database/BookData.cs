@@ -18,7 +18,7 @@ namespace FirstApiSandbox.Database
             return bookList;
         }
 
-        public Book GetBooksFromDatabaseAtIndex(string name)
+        public Book GetBooksFromDatabaseByName(string name)
         {
             Debug.WriteLine(name);
 
@@ -32,35 +32,16 @@ namespace FirstApiSandbox.Database
             bookList.Add(newBook);
         }
 
-        public bool UpdateBookInDatabase(string name, Book newBook)
+        public void UpdateBookInDatabase(string name, Book newBook)
         {
-            try
-            {
-                bookList[bookList.IndexOf(bookList.Where(iteratorBook => iteratorBook.Name == name).FirstOrDefault())].Author = newBook.Author;
-                bookList[bookList.IndexOf(bookList.Where(iteratorBook => iteratorBook.Name == name).FirstOrDefault())].Genre = newBook.Genre;
-                bookList[bookList.IndexOf(bookList.Where(iteratorBook => iteratorBook.Name == name).FirstOrDefault())].Name = newBook.Name;
-
-                return true;
-            }
-            catch (Exception)
-            {
-                return false;
-            }
-            
+            bookList[bookList.IndexOf(bookList.Where(iteratorBook => iteratorBook.Name == name).FirstOrDefault())].Author = newBook.Author;
+            bookList[bookList.IndexOf(bookList.Where(iteratorBook => iteratorBook.Name == name).FirstOrDefault())].Genre = newBook.Genre;
+            bookList[bookList.IndexOf(bookList.Where(iteratorBook => iteratorBook.Name == name).FirstOrDefault())].Name = newBook.Name;
         }
 
-        public bool DeleteBookFromDatabase(string name)
+        public void DeleteBookFromDatabase(string name)
         {
-            try
-            {
-                bookList.RemoveAt(bookList.IndexOf(bookList.Where(iteratorBook => iteratorBook.Name == name).FirstOrDefault()));
-                return true;
-            }
-            catch (Exception)
-            {
-                return false;
-            }
-            
+            bookList.RemoveAt(bookList.IndexOf(bookList.Where(iteratorBook => iteratorBook.Name == name).FirstOrDefault()));
         }
     }
 }

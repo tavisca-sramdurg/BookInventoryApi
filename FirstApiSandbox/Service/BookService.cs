@@ -4,40 +4,74 @@ using System.Linq;
 using System.Threading.Tasks;
 using FirstApiSandbox.Model;
 using FirstApiSandbox.Database;
+using FirstApiSandbox.Validation;
 
 namespace FirstApiSandbox.Service
 {
     public class BookService : IService
     {
+        public const string Valid = "Valid book";
+
         BookData bookData = new BookData();
 
-        public List<Book> GetBooksfromService()
+        public Response GetBooksfromService()
         {
-            return bookData.GetBooksFromDatabase();
+            var returnedBookList = bookData.GetBooksFromDatabase();
+            Response response = new Response(returnedBookList);
+            return response;
         }
 
-        public Book GetBookFromServiceByName(string name)
+        public Response GetBookFromServiceByName(string name)
         {
-            return bookData.GetBooksFromDatabaseAtIndex(name);
+            var returnedBook = bookData.GetBooksFromDatabaseByName(name);
+            Response response = new Response(returnedBook, Errors.NotFound);
+
+            return response;
         }
 
-        public void AddBookUsingService(Book newBook)
+        public Response AddBookUsingService(Book newBook)
         {
-            BookData.bookList.Add(newBook);
+            Response response;
+            string validationCode = BookValidation.IsBookValid(newBook);
+            if (validationCode.Equals(Valid))
+            {
+                bookData.AddBookInDatabase(newBook);
+                var returnedBook = bookData.GetBooksFromDatabaseByName(newBook.Name);
+                response = new Response(returnedBook, null);
+                return response;
+            }
+            else
+            {
+                response = new Response(null, validationCode);
+                return response;
+            }
         }
 
-        public bool UpdateBookUsingService(string name, Book newBook)
+        public Response UpdateBookUsingService(string name, Book newBook)
         {
-            if (name == "")
-                return false;
-            return bookData.UpdateBookInDatabase(name, newBook);
+            Response response;
+            string validationCode = BookValidation.IsBookValid(newBook);
+            if (validationCode.Equals(Valid))
+            {
+                bookData.UpdateBookInDatabase(name, newBook);
+                Book returnedBook = bookData.GetBooksFromDatabaseByName(newBook.Name);
+                response = new Response(returnedBook, null);
+                return response;
+            }
+            else
+            {
+                response = new Response(null, validationCode);
+                return response;
+            }
         }
 
-        public bool DeleteBookUsingService(string name)
+        public Response DeleteBookUsingService(string name)
         {
-            if (name == "")
-                return false;
-            return bookData.DeleteBookFromDatabase(name);
+            if (BookData.bookList.Where(iteratorBook => iteratorBook.Name.Equals(name)).FirstOrDefault() == null)
+                return new Response(null, Errors.NotFound);
+
+            bookData.DeleteBookFromDatabase(name);
+            return new Response(null, Errors.DeletionSuccessful);
         }
 
     }

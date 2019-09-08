@@ -3,6 +3,7 @@ using Microsoft.AspNetCore.Mvc;
 using FirstApiSandbox.Model;
 using FirstApiSandbox.Database;
 using FirstApiSandbox.Service;
+using FirstApiSandbox.Validation;
 using System.Linq;
 
 namespace FirstApiSandbox.Controllers
@@ -15,64 +16,65 @@ namespace FirstApiSandbox.Controllers
 
         // GET: api/Book
         [HttpGet]
-        public IEnumerable<Book> Get()
+        public ActionResult<List<Book>> Get()
         {
-            return bookService.GetBooksfromService();
+            Response response = bookService.GetBooksfromService();
+            return Ok(response.ResponseBookList);
         }
-
-        // GET: api/Book/5
-        //[HttpGet("{id}", Name = "Get")]
-        //public ActionResult<Book> Get(int id)
-        //{
-        //    var returnedBook = bookService.GetBooksFromDatabaseAtIndex(id);
-        //    if(returnedBook != null)
-        //    {
-        //        return Ok(returnedBook);
-        //    }
-
-        //    return NotFound("Book that you're looking for does not exist");
-        //}
 
         // GET: api/Book/5
         [HttpGet("{name}", Name = "Get")]
         public ActionResult<Book> Get(string name)
         {
-            var returnedBook = bookService.GetBookFromServiceByName(name);
-            if (returnedBook != null)
+            Response response = bookService.GetBookFromServiceByName(name);
+            
+            if (response.Data != null)
             {
-                return Ok(returnedBook);
+                return Ok(response.Data);
             }
 
-            return NotFound("Book that you're looking for does not exist");
+            return NotFound(response.ErrorMessage);
         }
 
         // POST: api/Book
         [HttpPost]
-        public void Post([FromBody] Book newBook)
+        public ActionResult<Book> Post([FromBody] Book newBook)
         {
-            bookService.AddBookUsingService(newBook);
+            Response response = bookService.AddBookUsingService(newBook);
+
+            if (response.Data != null)
+            {
+                return Ok(response.Data);
+            }
+
+            return NotFound(response.ErrorMessage);
+            
         }
 
         // PUT: api/Book/5
         [HttpPut("{name}")]
-        public ActionResult Put(string name, [FromBody] Book newBook)
+        public ActionResult<Book> Put(string name, [FromBody] Book newBook)
         {
-            if (bookService.UpdateBookUsingService(name, newBook))
-                return Ok(bookService.GetBookFromServiceByName(name));
+            Response response = bookService.UpdateBookUsingService(name, newBook);
+            if (response.Data != null)
+            {
+                return Ok(response.Data);
+            }
 
-            return NotFound();
-            //bookService.UpdateBookUsingService(id, newBook);
+            return NotFound(response.ErrorMessage);
         }
 
         // DELETE: api/ApiWithActions/5
         [HttpDelete("{name}")]
         public ActionResult Delete(string name)
         {
-            if (bookService.DeleteBookUsingService(name))
+            Response response = bookService.DeleteBookUsingService(name);
+
+            if (response.Data != null)
             {
-                return Ok();
+                return Ok(response.Data);
             }
-            return NotFound();
+            return NotFound(response.ErrorMessage);
         }
     }
 }
