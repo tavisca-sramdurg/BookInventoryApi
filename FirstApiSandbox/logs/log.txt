@@ -1,0 +1,805 @@
+2019-09-10 14:42:43,844 [7] INFO Microsoft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:52774/api/Book  
+2019-09-10 14:42:43,860 [7] INFO Microsoft.AspNetCore.Routing.EndpointMiddleware - Executing endpoint 'FirstApiSandbox.Controllers.BookController.Get (FirstApiSandbox)'
+2019-09-10 14:42:43,873 [7] INFO Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker - Route matched with {action = "Get", controller = "Book"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.List`1[FirstApiSandbox.Model.Book]] Get() on controller FirstApiSandbox.Controllers.BookController (FirstApiSandbox).
+2019-09-10 14:42:43,884 [7] INFO Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker - Executing action method FirstApiSandbox.Controllers.BookController.Get (FirstApiSandbox) - Validation state: Valid
+2019-09-10 14:42:43,890 [7] INFO Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker - Executed action method FirstApiSandbox.Controllers.BookController.Get (FirstApiSandbox), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 2.0916ms.
+2019-09-10 14:42:43,899 [7] INFO Microsoft.AspNetCore.Mvc.Infrastructure.ObjectResultExecutor - Executing ObjectResult, writing value of type 'System.Collections.Generic.List`1[[FirstApiSandbox.Model.Book, FirstApiSandbox, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2019-09-10 14:42:43,919 [7] INFO Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker - Executed action FirstApiSandbox.Controllers.BookController.Get (FirstApiSandbox) in 38.8763ms
+2019-09-10 14:42:43,924 [7] INFO Microsoft.AspNetCore.Routing.EndpointMiddleware - Executed endpoint 'FirstApiSandbox.Controllers.BookController.Get (FirstApiSandbox)'
+2019-09-10 14:42:43,927 [7] INFO FirstApiSandbox.Controllers.BookController - Request Logs!
+2019-09-10 14:42:43,929 [7] INFO FirstApiSandbox.Controllers.BookController - Response Logs!
+2019-09-10 14:42:43,945 [7] INFO Microsoft.AspNetCore.Hosting.Internal.WebHost - Request finished in 95.3167ms 200 application/json; charset=utf-8
+2019-09-10 14:42:52,143 [7] INFO Microsoft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 POST http://localhost:52774/api/Book application/json 77
+2019-09-10 14:42:52,176 [7] INFO Microsoft.AspNetCore.Routing.EndpointMiddleware - Executing endpoint 'FirstApiSandbox.Controllers.BookController.Post (FirstApiSandbox)'
+2019-09-10 14:42:52,201 [7] INFO Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker - Route matched with {action = "Post", controller = "Book"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.ActionResult`1[FirstApiSandbox.Model.Book] Post(FirstApiSandbox.Model.Book) on controller FirstApiSandbox.Controllers.BookController (FirstApiSandbox).
+2019-09-10 14:42:52,244 [7] INFO Microsoft.AspNetCore.Mvc.Infrastructure.ObjectResultExecutor - Executing ObjectResult, writing value of type 'Microsoft.AspNetCore.Mvc.ValidationProblemDetails'.
+2019-09-10 14:42:52,271 [7] INFO Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker - Executed action FirstApiSandbox.Controllers.BookController.Post (FirstApiSandbox) in 63.321ms
+2019-09-10 14:42:52,276 [7] INFO Microsoft.AspNetCore.Routing.EndpointMiddleware - Executed endpoint 'FirstApiSandbox.Controllers.BookController.Post (FirstApiSandbox)'
+2019-09-10 14:42:52,281 [7] INFO FirstApiSandbox.Controllers.BookController - Request Logs!
+2019-09-10 14:42:52,284 [7] INFO FirstApiSandbox.Controllers.BookController - Response Logs!
+2019-09-10 14:42:52,303 [7] INFO Microsoft.AspNetCore.Hosting.Internal.WebHost - Request finished in 149.3075ms 400 application/problem+json; charset=utf-8
+2019-09-10 14:44:55,600 [1] INFO Microsoft.AspNetCore.DataProtection.KeyManagement.XmlKeyManager - User profile is available. Using 'C:\Users\sramdurg\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2019-09-10 14:44:57,381 [6] INFO Microsoft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 POST http://localhost:52774/api/Book application/json 77
+2019-09-10 14:44:57,386 [7] INFO Microsoft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 DEBUG http://localhost:52774/  0
+2019-09-10 14:44:57,384 [10] INFO Microsoft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:52774/api/values  
+2019-09-10 14:44:57,451 [6] WARN Microsoft.AspNetCore.HttpsPolicy.HttpsRedirectionMiddleware - Failed to determine the https port for redirect.
+2019-09-10 14:44:57,483 [7] INFO Microsoft.AspNetCore.Hosting.Internal.WebHost - Request finished in 111.612ms 200 
+2019-09-10 14:44:57,565 [7] INFO Microsoft.AspNetCore.Routing.EndpointMiddleware - Executing endpoint 'FirstApiSandbox.Controllers.BookController.Post (FirstApiSandbox)'
+2019-09-10 14:44:57,566 [10] INFO Microsoft.AspNetCore.Routing.EndpointMiddleware - Executing endpoint 'FirstApiSandbox.Controllers.ValuesController.Get (FirstApiSandbox)'
+2019-09-10 14:44:57,631 [10] INFO Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker - Route matched with {action = "Get", controller = "Values"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[System.String]] Get() on controller FirstApiSandbox.Controllers.ValuesController (FirstApiSandbox).
+2019-09-10 14:44:57,643 [7] INFO Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker - Route matched with {action = "Post", controller = "Book"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.ActionResult`1[FirstApiSandbox.Model.Book] Post(FirstApiSandbox.Model.Book) on controller FirstApiSandbox.Controllers.BookController (FirstApiSandbox).
+2019-09-10 14:44:57,665 [10] INFO Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker - Executing action method FirstApiSandbox.Controllers.ValuesController.Get (FirstApiSandbox) - Validation state: Valid
+2019-09-10 14:44:57,680 [10] INFO Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker - Executed action method FirstApiSandbox.Controllers.ValuesController.Get (FirstApiSandbox), returned result Microsoft.AspNetCore.Mvc.ObjectResult in 0.544ms.
+2019-09-10 14:44:57,717 [10] INFO Microsoft.AspNetCore.Mvc.Infrastructure.ObjectResultExecutor - Executing ObjectResult, writing value of type 'System.String[]'.
+2019-09-10 14:44:57,781 [10] INFO Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker - Executed action FirstApiSandbox.Controllers.ValuesController.Get (FirstApiSandbox) in 136.3599ms
+2019-09-10 14:44:57,790 [10] INFO Microsoft.AspNetCore.Routing.EndpointMiddleware - Executed endpoint 'FirstApiSandbox.Controllers.ValuesController.Get (FirstApiSandbox)'
+2019-09-10 14:44:57,796 [7] INFO Microsoft.AspNetCore.Mvc.Infrastructure.ObjectResultExecutor - Executing ObjectResult, writing value of type 'Microsoft.AspNetCore.Mvc.ValidationProblemDetails'.
+2019-09-10 14:44:57,810 [10] INFO FirstApiSandbox.Controllers.BookController - Request Logs!
+2019-09-10 14:44:57,817 [10] INFO FirstApiSandbox.Controllers.BookController - Response Logs!
+2019-09-10 14:44:57,996 [7] INFO Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker - Executed action FirstApiSandbox.Controllers.BookController.Post (FirstApiSandbox) in 178.6488ms
+2019-09-10 14:44:58,145 [10] INFO Microsoft.AspNetCore.Hosting.Internal.WebHost - Request finished in 571.1617ms 200 application/json; charset=utf-8
+2019-09-10 14:44:58,169 [7] INFO Microsoft.AspNetCore.Routing.EndpointMiddleware - Executed endpoint 'FirstApiSandbox.Controllers.BookController.Post (FirstApiSandbox)'
+2019-09-10 14:44:58,182 [7] INFO FirstApiSandbox.Controllers.BookController - Request Logs!
+2019-09-10 14:44:58,186 [7] INFO FirstApiSandbox.Controllers.BookController - Response Logs!
+2019-09-10 14:44:58,265 [7] INFO Microsoft.AspNetCore.Hosting.Internal.WebHost - Request finished in 841.1398ms 400 application/problem+json; charset=utf-8
+2019-09-10 14:45:27,649 [6] INFO Microsoft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:52774/api/Book  
+2019-09-10 14:45:27,670 [6] INFO Microsoft.AspNetCore.Routing.EndpointMiddleware - Executing endpoint 'FirstApiSandbox.Controllers.BookController.Get (FirstApiSandbox)'
+2019-09-10 14:45:27,681 [6] INFO Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker - Route matched with {action = "Get", controller = "Book"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.List`1[FirstApiSandbox.Model.Book]] Get() on controller FirstApiSandbox.Controllers.BookController (FirstApiSandbox).
+2019-09-10 14:45:27,690 [6] INFO Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker - Executing action method FirstApiSandbox.Controllers.BookController.Get (FirstApiSandbox) - Validation state: Valid
+2019-09-10 14:45:27,697 [6] INFO Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker - Executed action method FirstApiSandbox.Controllers.BookController.Get (FirstApiSandbox), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 2.0342ms.
+2019-09-10 14:45:27,705 [6] INFO Microsoft.AspNetCore.Mvc.Infrastructure.ObjectResultExecutor - Executing ObjectResult, writing value of type 'System.Collections.Generic.List`1[[FirstApiSandbox.Model.Book, FirstApiSandbox, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2019-09-10 14:45:27,713 [6] INFO Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker - Executed action FirstApiSandbox.Controllers.BookController.Get (FirstApiSandbox) in 24.4817ms
+2019-09-10 14:45:27,721 [6] INFO Microsoft.AspNetCore.Routing.EndpointMiddleware - Executed endpoint 'FirstApiSandbox.Controllers.BookController.Get (FirstApiSandbox)'
+2019-09-10 14:45:27,723 [6] INFO FirstApiSandbox.Controllers.BookController - Request Logs!
+2019-09-10 14:45:27,726 [6] INFO FirstApiSandbox.Controllers.BookController - Response Logs!
+2019-09-10 14:45:27,734 [6] INFO Microsoft.AspNetCore.Hosting.Internal.WebHost - Request finished in 118.9422ms 200 application/json; charset=utf-8
+2019-09-10 14:49:55,644 [1] INFO Microsoft.AspNetCore.DataProtection.KeyManagement.XmlKeyManager - User profile is available. Using 'C:\Users\sramdurg\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2019-09-10 14:49:57,206 [10] INFO Microsoft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:52774/api/Book  
+2019-09-10 14:49:57,211 [6] INFO Microsoft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:52774/api/values  
+2019-09-10 14:49:57,216 [7] INFO Microsoft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 DEBUG http://localhost:52774/  0
+2019-09-10 14:49:57,400 [6] WARN Microsoft.AspNetCore.HttpsPolicy.HttpsRedirectionMiddleware - Failed to determine the https port for redirect.
+2019-09-10 14:49:57,461 [7] INFO Microsoft.AspNetCore.Hosting.Internal.WebHost - Request finished in 225.4867ms 200 
+2019-09-10 14:49:57,536 [6] INFO Microsoft.AspNetCore.Routing.EndpointMiddleware - Executing endpoint 'FirstApiSandbox.Controllers.ValuesController.Get (FirstApiSandbox)'
+2019-09-10 14:49:57,550 [7] INFO Microsoft.AspNetCore.Routing.EndpointMiddleware - Executing endpoint 'FirstApiSandbox.Controllers.BookController.Get (FirstApiSandbox)'
+2019-09-10 14:49:57,617 [6] INFO Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker - Route matched with {action = "Get", controller = "Values"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[System.String]] Get() on controller FirstApiSandbox.Controllers.ValuesController (FirstApiSandbox).
+2019-09-10 14:49:57,623 [7] INFO Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker - Route matched with {action = "Get", controller = "Book"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.List`1[FirstApiSandbox.Model.Book]] Get() on controller FirstApiSandbox.Controllers.BookController (FirstApiSandbox).
+2019-09-10 14:49:57,659 [6] INFO Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker - Executing action method FirstApiSandbox.Controllers.ValuesController.Get (FirstApiSandbox) - Validation state: Valid
+2019-09-10 14:49:57,666 [7] INFO Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker - Executing action method FirstApiSandbox.Controllers.BookController.Get (FirstApiSandbox) - Validation state: Valid
+2019-09-10 14:49:57,707 [7] INFO Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker - Executed action method FirstApiSandbox.Controllers.BookController.Get (FirstApiSandbox), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 4.1414ms.
+2019-09-10 14:49:57,723 [6] INFO Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker - Executed action method FirstApiSandbox.Controllers.ValuesController.Get (FirstApiSandbox), returned result Microsoft.AspNetCore.Mvc.ObjectResult in 0.8651ms.
+2019-09-10 14:49:57,746 [7] INFO Microsoft.AspNetCore.Mvc.Infrastructure.ObjectResultExecutor - Executing ObjectResult, writing value of type 'System.Collections.Generic.List`1[[FirstApiSandbox.Model.Book, FirstApiSandbox, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2019-09-10 14:49:57,755 [6] INFO Microsoft.AspNetCore.Mvc.Infrastructure.ObjectResultExecutor - Executing ObjectResult, writing value of type 'System.String[]'.
+2019-09-10 14:49:57,880 [6] INFO Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker - Executed action FirstApiSandbox.Controllers.ValuesController.Get (FirstApiSandbox) in 248.2836ms
+2019-09-10 14:49:57,887 [7] INFO Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker - Executed action FirstApiSandbox.Controllers.BookController.Get (FirstApiSandbox) in 247.7592ms
+2019-09-10 14:49:57,906 [6] INFO Microsoft.AspNetCore.Routing.EndpointMiddleware - Executed endpoint 'FirstApiSandbox.Controllers.ValuesController.Get (FirstApiSandbox)'
+2019-09-10 14:49:57,925 [7] INFO Microsoft.AspNetCore.Routing.EndpointMiddleware - Executed endpoint 'FirstApiSandbox.Controllers.BookController.Get (FirstApiSandbox)'
+2019-09-10 14:49:57,935 [7] INFO FirstApiSandbox.Controllers.BookController - Request Logs!
+2019-09-10 14:49:57,935 [6] INFO FirstApiSandbox.Controllers.BookController - Request Logs!
+2019-09-10 14:49:57,941 [7] INFO FirstApiSandbox.Controllers.BookController - Response Logs!
+2019-09-10 14:49:57,941 [6] INFO FirstApiSandbox.Controllers.BookController - Response Logs!
+2019-09-10 14:49:58,054 [7] INFO Microsoft.AspNetCore.Hosting.Internal.WebHost - Request finished in 759.943ms 200 application/json; charset=utf-8
+2019-09-10 14:49:58,073 [6] INFO Microsoft.AspNetCore.Hosting.Internal.WebHost - Request finished in 759.1626ms 200 application/json; charset=utf-8
+2019-09-10 14:50:06,449 [7] INFO Microsoft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 POST http://localhost:52774/api/Book application/json 77
+2019-09-10 14:50:06,483 [7] INFO Microsoft.AspNetCore.Routing.EndpointMiddleware - Executing endpoint 'FirstApiSandbox.Controllers.BookController.Post (FirstApiSandbox)'
+2019-09-10 14:50:06,510 [7] INFO Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker - Route matched with {action = "Post", controller = "Book"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.ActionResult`1[FirstApiSandbox.Model.Book] Post(FirstApiSandbox.Model.Book) on controller FirstApiSandbox.Controllers.BookController (FirstApiSandbox).
+2019-09-10 14:50:06,549 [7] INFO Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker - Executing action method FirstApiSandbox.Controllers.BookController.Post (FirstApiSandbox) - Validation state: Valid
+2019-09-10 14:50:06,576 [7] INFO Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker - Executed action method FirstApiSandbox.Controllers.BookController.Post (FirstApiSandbox), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 18.9502ms.
+2019-09-10 14:50:06,586 [7] INFO Microsoft.AspNetCore.Mvc.Infrastructure.ObjectResultExecutor - Executing ObjectResult, writing value of type 'FirstApiSandbox.Model.Book'.
+2019-09-10 14:50:06,593 [7] INFO Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker - Executed action FirstApiSandbox.Controllers.BookController.Post (FirstApiSandbox) in 72.3156ms
+2019-09-10 14:50:06,607 [7] INFO Microsoft.AspNetCore.Routing.EndpointMiddleware - Executed endpoint 'FirstApiSandbox.Controllers.BookController.Post (FirstApiSandbox)'
+2019-09-10 14:50:06,611 [7] INFO FirstApiSandbox.Controllers.BookController - Request Logs!
+2019-09-10 14:50:06,614 [7] INFO FirstApiSandbox.Controllers.BookController - Response Logs!
+2019-09-10 14:50:06,632 [7] INFO Microsoft.AspNetCore.Hosting.Internal.WebHost - Request finished in 179.6744ms 200 application/json; charset=utf-8
+2019-09-10 14:50:10,948 [6] INFO Microsoft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:52774/api/Book  
+2019-09-10 14:50:10,955 [6] INFO Microsoft.AspNetCore.Routing.EndpointMiddleware - Executing endpoint 'FirstApiSandbox.Controllers.BookController.Get (FirstApiSandbox)'
+2019-09-10 14:50:10,976 [6] INFO Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker - Route matched with {action = "Get", controller = "Book"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.List`1[FirstApiSandbox.Model.Book]] Get() on controller FirstApiSandbox.Controllers.BookController (FirstApiSandbox).
+2019-09-10 14:50:10,986 [6] INFO Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker - Executing action method FirstApiSandbox.Controllers.BookController.Get (FirstApiSandbox) - Validation state: Valid
+2019-09-10 14:50:10,993 [6] INFO Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker - Executed action method FirstApiSandbox.Controllers.BookController.Get (FirstApiSandbox), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 0.0599ms.
+2019-09-10 14:50:11,004 [6] INFO Microsoft.AspNetCore.Mvc.Infrastructure.ObjectResultExecutor - Executing ObjectResult, writing value of type 'System.Collections.Generic.List`1[[FirstApiSandbox.Model.Book, FirstApiSandbox, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2019-09-10 14:50:11,015 [6] INFO Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker - Executed action FirstApiSandbox.Controllers.BookController.Get (FirstApiSandbox) in 24.8965ms
+2019-09-10 14:50:11,022 [6] INFO Microsoft.AspNetCore.Routing.EndpointMiddleware - Executed endpoint 'FirstApiSandbox.Controllers.BookController.Get (FirstApiSandbox)'
+2019-09-10 14:50:11,025 [6] INFO FirstApiSandbox.Controllers.BookController - Request Logs!
+2019-09-10 14:50:11,030 [6] INFO FirstApiSandbox.Controllers.BookController - Response Logs!
+2019-09-10 14:50:11,042 [6] INFO Microsoft.AspNetCore.Hosting.Internal.WebHost - Request finished in 95.3755ms 200 application/json; charset=utf-8
+2019-09-10 15:21:21,087 [1] INFO Microsoft.AspNetCore.DataProtection.KeyManagement.XmlKeyManager - User profile is available. Using 'C:\Users\sramdurg\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2019-09-10 15:21:21,833 [9] INFO Microsoft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:52774/api/Book  
+2019-09-10 15:21:21,861 [9] WARN Microsoft.AspNetCore.HttpsPolicy.HttpsRedirectionMiddleware - Failed to determine the https port for redirect.
+2019-09-10 15:21:21,936 [9] INFO Microsoft.AspNetCore.Routing.EndpointMiddleware - Executing endpoint 'FirstApiSandbox.Controllers.BookController.Get (FirstApiSandbox)'
+2019-09-10 15:21:21,964 [9] INFO Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker - Route matched with {action = "Get", controller = "Book"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.List`1[FirstApiSandbox.Model.Book]] Get() on controller FirstApiSandbox.Controllers.BookController (FirstApiSandbox).
+2019-09-10 15:21:21,984 [9] INFO Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker - Executing action method FirstApiSandbox.Controllers.BookController.Get (FirstApiSandbox) - Validation state: Valid
+2019-09-10 15:21:21,992 [9] INFO Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker - Executed action method FirstApiSandbox.Controllers.BookController.Get (FirstApiSandbox), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 2.2885ms.
+2019-09-10 15:21:22,006 [9] INFO Microsoft.AspNetCore.Mvc.Infrastructure.ObjectResultExecutor - Executing ObjectResult, writing value of type 'System.Collections.Generic.List`1[[FirstApiSandbox.Model.Book, FirstApiSandbox, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2019-09-10 15:21:22,083 [9] INFO Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker - Executed action FirstApiSandbox.Controllers.BookController.Get (FirstApiSandbox) in 110.0682ms
+2019-09-10 15:21:22,088 [9] INFO Microsoft.AspNetCore.Routing.EndpointMiddleware - Executed endpoint 'FirstApiSandbox.Controllers.BookController.Get (FirstApiSandbox)'
+2019-09-10 15:21:22,094 [9] INFO FirstApiSandbox.Controllers.BookController - Request Logs!
+2019-09-10 15:21:22,103 [9] INFO FirstApiSandbox.Controllers.BookController - Response Logs!
+2019-09-10 15:21:22,141 [9] INFO Microsoft.AspNetCore.Hosting.Internal.WebHost - Request finished in 303.2838ms 200 application/json; charset=utf-8
+2019-09-10 15:21:26,171 [10] INFO Microsoft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 POST http://localhost:52774/api/Book application/json 77
+2019-09-10 15:21:26,208 [10] INFO Microsoft.AspNetCore.Routing.EndpointMiddleware - Executing endpoint 'FirstApiSandbox.Controllers.BookController.Post (FirstApiSandbox)'
+2019-09-10 15:21:26,238 [10] INFO Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker - Route matched with {action = "Post", controller = "Book"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.ActionResult`1[FirstApiSandbox.Model.Book] Post(FirstApiSandbox.Model.Book) on controller FirstApiSandbox.Controllers.BookController (FirstApiSandbox).
+2019-09-10 15:21:26,267 [10] INFO Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker - Executing action method FirstApiSandbox.Controllers.BookController.Post (FirstApiSandbox) - Validation state: Valid
+2019-09-10 15:21:26,277 [10] INFO Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker - Executed action method FirstApiSandbox.Controllers.BookController.Post (FirstApiSandbox), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 6.4988ms.
+2019-09-10 15:21:26,283 [10] INFO Microsoft.AspNetCore.Mvc.Infrastructure.ObjectResultExecutor - Executing ObjectResult, writing value of type 'FirstApiSandbox.Model.Book'.
+2019-09-10 15:21:26,290 [10] INFO Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker - Executed action FirstApiSandbox.Controllers.BookController.Post (FirstApiSandbox) in 47.9724ms
+2019-09-10 15:21:26,293 [10] INFO Microsoft.AspNetCore.Routing.EndpointMiddleware - Executed endpoint 'FirstApiSandbox.Controllers.BookController.Post (FirstApiSandbox)'
+2019-09-10 15:21:26,300 [10] INFO FirstApiSandbox.Controllers.BookController - Request Logs!
+2019-09-10 15:21:26,304 [10] INFO FirstApiSandbox.Controllers.BookController - Response Logs!
+2019-09-10 15:21:26,308 [10] INFO Microsoft.AspNetCore.Hosting.Internal.WebHost - Request finished in 137.4618ms 200 application/json; charset=utf-8
+2019-09-10 15:21:30,094 [10] INFO Microsoft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 POST http://localhost:52774/api/Book application/json 71
+2019-09-10 15:21:30,101 [10] INFO Microsoft.AspNetCore.Routing.EndpointMiddleware - Executing endpoint 'FirstApiSandbox.Controllers.BookController.Post (FirstApiSandbox)'
+2019-09-10 15:21:30,106 [10] INFO Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker - Route matched with {action = "Post", controller = "Book"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.ActionResult`1[FirstApiSandbox.Model.Book] Post(FirstApiSandbox.Model.Book) on controller FirstApiSandbox.Controllers.BookController (FirstApiSandbox).
+2019-09-10 15:21:30,112 [10] INFO Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker - Executing action method FirstApiSandbox.Controllers.BookController.Post (FirstApiSandbox) - Validation state: Valid
+2019-09-10 15:21:30,117 [10] INFO Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker - Executed action method FirstApiSandbox.Controllers.BookController.Post (FirstApiSandbox), returned result Microsoft.AspNetCore.Mvc.NotFoundObjectResult in 0.2767ms.
+2019-09-10 15:21:30,120 [10] INFO Microsoft.AspNetCore.Mvc.Infrastructure.ObjectResultExecutor - Executing ObjectResult, writing value of type 'System.String'.
+2019-09-10 15:21:30,123 [10] INFO Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker - Executed action FirstApiSandbox.Controllers.BookController.Post (FirstApiSandbox) in 13.7225ms
+2019-09-10 15:21:30,132 [10] INFO Microsoft.AspNetCore.Routing.EndpointMiddleware - Executed endpoint 'FirstApiSandbox.Controllers.BookController.Post (FirstApiSandbox)'
+2019-09-10 15:21:30,137 [10] INFO FirstApiSandbox.Controllers.BookController - Request Logs!
+2019-09-10 15:21:30,142 [10] INFO FirstApiSandbox.Controllers.BookController - Response Logs!
+2019-09-10 15:21:30,152 [10] INFO Microsoft.AspNetCore.Hosting.Internal.WebHost - Request finished in 58.2542ms 404 text/plain; charset=utf-8
+2019-09-10 17:35:19,088 [1] INFO Microsoft.AspNetCore.DataProtection.KeyManagement.XmlKeyManager - User profile is available. Using 'C:\Users\sramdurg\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2019-09-10 17:35:21,704 [9] INFO Microsoft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:52774/api/values  
+2019-09-10 17:35:21,713 [7] INFO Microsoft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:52774/api/Book  
+2019-09-10 17:35:21,739 [10] INFO Microsoft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 DEBUG http://localhost:52774/  0
+2019-09-10 17:35:21,883 [9] WARN Microsoft.AspNetCore.HttpsPolicy.HttpsRedirectionMiddleware - Failed to determine the https port for redirect.
+2019-09-10 17:35:21,943 [10] INFO Microsoft.AspNetCore.Hosting.Internal.WebHost - Request finished in 240.7854ms 200 
+2019-09-10 17:35:22,170 [7] INFO Microsoft.AspNetCore.Routing.EndpointMiddleware - Executing endpoint 'FirstApiSandbox.Controllers.BookController.Get (FirstApiSandbox)'
+2019-09-10 17:35:22,173 [10] INFO Microsoft.AspNetCore.Routing.EndpointMiddleware - Executing endpoint 'FirstApiSandbox.Controllers.ValuesController.Get (FirstApiSandbox)'
+2019-09-10 17:35:22,261 [10] INFO Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker - Route matched with {action = "Get", controller = "Values"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[System.String]] Get() on controller FirstApiSandbox.Controllers.ValuesController (FirstApiSandbox).
+2019-09-10 17:35:22,265 [7] INFO Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker - Route matched with {action = "Get", controller = "Book"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.List`1[FirstApiSandbox.Model.Book]] Get() on controller FirstApiSandbox.Controllers.BookController (FirstApiSandbox).
+2019-09-10 17:35:22,307 [10] INFO Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker - Executing action method FirstApiSandbox.Controllers.ValuesController.Get (FirstApiSandbox) - Validation state: Valid
+2019-09-10 17:35:22,341 [7] INFO Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker - Executing action method FirstApiSandbox.Controllers.BookController.Get (FirstApiSandbox) - Validation state: Valid
+2019-09-10 17:35:22,391 [10] INFO Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker - Executed action method FirstApiSandbox.Controllers.ValuesController.Get (FirstApiSandbox), returned result Microsoft.AspNetCore.Mvc.ObjectResult in 1.1643ms.
+2019-09-10 17:35:22,437 [7] INFO Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker - Executed action method FirstApiSandbox.Controllers.BookController.Get (FirstApiSandbox), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 30.8741ms.
+2019-09-10 17:35:22,474 [10] INFO Microsoft.AspNetCore.Mvc.Infrastructure.ObjectResultExecutor - Executing ObjectResult, writing value of type 'System.String[]'.
+2019-09-10 17:35:22,517 [7] INFO Microsoft.AspNetCore.Mvc.Infrastructure.ObjectResultExecutor - Executing ObjectResult, writing value of type 'System.Collections.Generic.List`1[[FirstApiSandbox.Model.Book, FirstApiSandbox, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2019-09-10 17:35:22,766 [10] INFO Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker - Executed action FirstApiSandbox.Controllers.ValuesController.Get (FirstApiSandbox) in 444.6548ms
+2019-09-10 17:35:22,779 [7] INFO Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker - Executed action FirstApiSandbox.Controllers.BookController.Get (FirstApiSandbox) in 471.6009ms
+2019-09-10 17:35:22,788 [10] INFO Microsoft.AspNetCore.Routing.EndpointMiddleware - Executed endpoint 'FirstApiSandbox.Controllers.ValuesController.Get (FirstApiSandbox)'
+2019-09-10 17:35:22,800 [7] INFO Microsoft.AspNetCore.Routing.EndpointMiddleware - Executed endpoint 'FirstApiSandbox.Controllers.BookController.Get (FirstApiSandbox)'
+2019-09-10 17:35:22,822 [7] INFO FirstApiSandbox.Controllers.BookController - Request Logs!
+2019-09-10 17:35:22,822 [10] INFO FirstApiSandbox.Controllers.BookController - Request Logs!
+2019-09-10 17:35:23,156 [7] INFO Microsoft.AspNetCore.Hosting.Internal.WebHost - Request finished in 1160.4119ms 200 application/json; charset=utf-8
+2019-09-10 17:35:23,216 [10] INFO Microsoft.AspNetCore.Hosting.Internal.WebHost - Request finished in 1172.8322ms 200 application/json; charset=utf-8
+2019-09-10 17:35:35,932 [6] INFO Microsoft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 POST http://localhost:52774/api/Book application/json 80
+2019-09-10 17:35:36,004 [6] INFO Microsoft.AspNetCore.Routing.EndpointMiddleware - Executing endpoint 'FirstApiSandbox.Controllers.BookController.Post (FirstApiSandbox)'
+2019-09-10 17:35:36,091 [6] INFO Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker - Route matched with {action = "Post", controller = "Book"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.ActionResult`1[FirstApiSandbox.Model.Book] Post(FirstApiSandbox.Model.Book) on controller FirstApiSandbox.Controllers.BookController (FirstApiSandbox).
+2019-09-10 17:35:36,154 [6] INFO Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker - Executing action method FirstApiSandbox.Controllers.BookController.Post (FirstApiSandbox) - Validation state: Valid
+2019-09-10 17:35:36,399 [6] INFO Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker - Executed action method FirstApiSandbox.Controllers.BookController.Post (FirstApiSandbox), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 225.4568ms.
+2019-09-10 17:35:36,416 [6] INFO Microsoft.AspNetCore.Mvc.Infrastructure.ObjectResultExecutor - Executing ObjectResult, writing value of type 'FirstApiSandbox.Model.Book'.
+2019-09-10 17:35:36,445 [6] INFO Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker - Executed action FirstApiSandbox.Controllers.BookController.Post (FirstApiSandbox) in 329.7588ms
+2019-09-10 17:35:36,491 [6] INFO Microsoft.AspNetCore.Routing.EndpointMiddleware - Executed endpoint 'FirstApiSandbox.Controllers.BookController.Post (FirstApiSandbox)'
+2019-09-10 17:35:36,508 [6] INFO FirstApiSandbox.Controllers.BookController - Request Logs!
+2019-09-10 17:35:36,541 [6] INFO Microsoft.AspNetCore.Hosting.Internal.WebHost - Request finished in 600.5972ms 200 application/json; charset=utf-8
+2019-09-10 17:35:43,302 [6] INFO Microsoft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:52774/api/Book  
+2019-09-10 17:35:43,322 [6] INFO Microsoft.AspNetCore.Routing.EndpointMiddleware - Executing endpoint 'FirstApiSandbox.Controllers.BookController.Get (FirstApiSandbox)'
+2019-09-10 17:35:43,334 [6] INFO Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker - Route matched with {action = "Get", controller = "Book"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.List`1[FirstApiSandbox.Model.Book]] Get() on controller FirstApiSandbox.Controllers.BookController (FirstApiSandbox).
+2019-09-10 17:35:43,349 [6] INFO Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker - Executing action method FirstApiSandbox.Controllers.BookController.Get (FirstApiSandbox) - Validation state: Valid
+2019-09-10 17:35:43,361 [6] INFO Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker - Executed action method FirstApiSandbox.Controllers.BookController.Get (FirstApiSandbox), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 0.0581ms.
+2019-09-10 17:35:43,370 [6] INFO Microsoft.AspNetCore.Mvc.Infrastructure.ObjectResultExecutor - Executing ObjectResult, writing value of type 'System.Collections.Generic.List`1[[FirstApiSandbox.Model.Book, FirstApiSandbox, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2019-09-10 17:35:43,387 [6] INFO Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker - Executed action FirstApiSandbox.Controllers.BookController.Get (FirstApiSandbox) in 41.4001ms
+2019-09-10 17:35:43,399 [6] INFO Microsoft.AspNetCore.Routing.EndpointMiddleware - Executed endpoint 'FirstApiSandbox.Controllers.BookController.Get (FirstApiSandbox)'
+2019-09-10 17:35:43,403 [6] INFO FirstApiSandbox.Controllers.BookController - Request Logs!
+2019-09-10 17:35:43,421 [6] INFO Microsoft.AspNetCore.Hosting.Internal.WebHost - Request finished in 156.9012ms 200 application/json; charset=utf-8
+2019-09-10 17:37:19,128 [1] INFO Microsoft.AspNetCore.DataProtection.KeyManagement.XmlKeyManager - User profile is available. Using 'C:\Users\sramdurg\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2019-09-10 17:37:20,411 [7] INFO Microsoft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:52774/api/values  
+2019-09-10 17:37:20,416 [10] INFO Microsoft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 DEBUG http://localhost:52774/  0
+2019-09-10 17:37:20,503 [7] WARN Microsoft.AspNetCore.HttpsPolicy.HttpsRedirectionMiddleware - Failed to determine the https port for redirect.
+2019-09-10 17:37:20,563 [10] INFO Microsoft.AspNetCore.Hosting.Internal.WebHost - Request finished in 151.8777ms 200 
+2019-09-10 17:37:20,643 [7] INFO Microsoft.AspNetCore.Routing.EndpointMiddleware - Executing endpoint 'FirstApiSandbox.Controllers.ValuesController.Get (FirstApiSandbox)'
+2019-09-10 17:37:20,689 [7] INFO Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker - Route matched with {action = "Get", controller = "Values"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[System.String]] Get() on controller FirstApiSandbox.Controllers.ValuesController (FirstApiSandbox).
+2019-09-10 17:37:20,710 [7] INFO Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker - Executing action method FirstApiSandbox.Controllers.ValuesController.Get (FirstApiSandbox) - Validation state: Valid
+2019-09-10 17:37:20,721 [7] INFO Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker - Executed action method FirstApiSandbox.Controllers.ValuesController.Get (FirstApiSandbox), returned result Microsoft.AspNetCore.Mvc.ObjectResult in 0.8084ms.
+2019-09-10 17:37:20,737 [7] INFO Microsoft.AspNetCore.Mvc.Infrastructure.ObjectResultExecutor - Executing ObjectResult, writing value of type 'System.String[]'.
+2019-09-10 17:37:20,833 [7] INFO Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker - Executed action FirstApiSandbox.Controllers.ValuesController.Get (FirstApiSandbox) in 134.6587ms
+2019-09-10 17:37:20,838 [7] INFO Microsoft.AspNetCore.Routing.EndpointMiddleware - Executed endpoint 'FirstApiSandbox.Controllers.ValuesController.Get (FirstApiSandbox)'
+2019-09-10 17:37:20,844 [7] INFO FirstApiSandbox.Controllers.BookController - Request Logs!
+2019-09-10 17:37:20,892 [7] INFO Microsoft.AspNetCore.Hosting.Internal.WebHost - Request finished in 465.6282ms 200 application/json; charset=utf-8
+2019-09-10 17:37:34,343 [7] INFO Microsoft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:52774/api/Book  
+2019-09-10 17:37:34,366 [7] INFO Microsoft.AspNetCore.Routing.EndpointMiddleware - Executing endpoint 'FirstApiSandbox.Controllers.BookController.Get (FirstApiSandbox)'
+2019-09-10 17:37:34,386 [7] INFO Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker - Route matched with {action = "Get", controller = "Book"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.List`1[FirstApiSandbox.Model.Book]] Get() on controller FirstApiSandbox.Controllers.BookController (FirstApiSandbox).
+2019-09-10 17:37:34,398 [7] INFO Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker - Executing action method FirstApiSandbox.Controllers.BookController.Get (FirstApiSandbox) - Validation state: Valid
+2019-09-10 17:37:34,409 [7] INFO Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker - Executed action method FirstApiSandbox.Controllers.BookController.Get (FirstApiSandbox), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 1.7966ms.
+2019-09-10 17:37:34,418 [7] INFO Microsoft.AspNetCore.Mvc.Infrastructure.ObjectResultExecutor - Executing ObjectResult, writing value of type 'System.Collections.Generic.List`1[[FirstApiSandbox.Model.Book, FirstApiSandbox, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2019-09-10 17:37:34,445 [7] INFO Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker - Executed action FirstApiSandbox.Controllers.BookController.Get (FirstApiSandbox) in 49.7116ms
+2019-09-10 17:37:34,454 [7] INFO Microsoft.AspNetCore.Routing.EndpointMiddleware - Executed endpoint 'FirstApiSandbox.Controllers.BookController.Get (FirstApiSandbox)'
+2019-09-10 17:37:34,458 [7] INFO FirstApiSandbox.Controllers.BookController - Request Logs!
+2019-09-10 17:37:34,471 [7] INFO Microsoft.AspNetCore.Hosting.Internal.WebHost - Request finished in 131.8085ms 200 application/json; charset=utf-8
+2019-09-10 17:37:38,708 [7] INFO Microsoft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 POST http://localhost:52774/api/Book application/json 80
+2019-09-10 17:37:38,877 [7] INFO Microsoft.AspNetCore.Routing.EndpointMiddleware - Executing endpoint 'FirstApiSandbox.Controllers.BookController.Post (FirstApiSandbox)'
+2019-09-10 17:37:38,934 [7] INFO Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker - Route matched with {action = "Post", controller = "Book"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.ActionResult`1[FirstApiSandbox.Model.Book] Post(FirstApiSandbox.Model.Book) on controller FirstApiSandbox.Controllers.BookController (FirstApiSandbox).
+2019-09-10 17:37:38,982 [7] INFO Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker - Executing action method FirstApiSandbox.Controllers.BookController.Post (FirstApiSandbox) - Validation state: Valid
+2019-09-10 17:37:39,149 [7] INFO Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker - Executed action method FirstApiSandbox.Controllers.BookController.Post (FirstApiSandbox), returned result Microsoft.AspNetCore.Mvc.NotFoundObjectResult in 155.8495ms.
+2019-09-10 17:37:39,157 [7] INFO Microsoft.AspNetCore.Mvc.Infrastructure.ObjectResultExecutor - Executing ObjectResult, writing value of type 'null'.
+2019-09-10 17:37:39,166 [7] INFO Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker - Executed action FirstApiSandbox.Controllers.BookController.Post (FirstApiSandbox) in 223.0211ms
+2019-09-10 17:37:39,174 [7] INFO Microsoft.AspNetCore.Routing.EndpointMiddleware - Executed endpoint 'FirstApiSandbox.Controllers.BookController.Post (FirstApiSandbox)'
+2019-09-10 17:37:39,178 [7] INFO FirstApiSandbox.Controllers.BookController - Request Logs!
+2019-09-10 17:37:39,186 [7] INFO Microsoft.AspNetCore.Hosting.Internal.WebHost - Request finished in 539.0881ms 404 
+2019-09-10 17:37:44,569 [6] INFO Microsoft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:52774/api/Book  
+2019-09-10 17:37:44,581 [6] INFO Microsoft.AspNetCore.Routing.EndpointMiddleware - Executing endpoint 'FirstApiSandbox.Controllers.BookController.Get (FirstApiSandbox)'
+2019-09-10 17:37:44,596 [6] INFO Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker - Route matched with {action = "Get", controller = "Book"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.List`1[FirstApiSandbox.Model.Book]] Get() on controller FirstApiSandbox.Controllers.BookController (FirstApiSandbox).
+2019-09-10 17:37:44,614 [6] INFO Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker - Executing action method FirstApiSandbox.Controllers.BookController.Get (FirstApiSandbox) - Validation state: Valid
+2019-09-10 17:37:44,637 [6] INFO Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker - Executed action method FirstApiSandbox.Controllers.BookController.Get (FirstApiSandbox), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 0.0657ms.
+2019-09-10 17:37:44,651 [6] INFO Microsoft.AspNetCore.Mvc.Infrastructure.ObjectResultExecutor - Executing ObjectResult, writing value of type 'System.Collections.Generic.List`1[[FirstApiSandbox.Model.Book, FirstApiSandbox, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2019-09-10 17:37:44,660 [6] INFO Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker - Executed action FirstApiSandbox.Controllers.BookController.Get (FirstApiSandbox) in 50.4113ms
+2019-09-10 17:37:44,673 [6] INFO Microsoft.AspNetCore.Routing.EndpointMiddleware - Executed endpoint 'FirstApiSandbox.Controllers.BookController.Get (FirstApiSandbox)'
+2019-09-10 17:37:44,679 [6] INFO FirstApiSandbox.Controllers.BookController - Request Logs!
+2019-09-10 17:37:44,693 [6] INFO Microsoft.AspNetCore.Hosting.Internal.WebHost - Request finished in 118.3638ms 200 application/json; charset=utf-8
+2019-09-10 17:40:30,484 [1] INFO Microsoft.AspNetCore.DataProtection.KeyManagement.XmlKeyManager - User profile is available. Using 'C:\Users\sramdurg\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2019-09-10 17:40:31,758 [9] INFO Microsoft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:52774/api/values  
+2019-09-10 17:40:31,770 [7] INFO Microsoft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 DEBUG http://localhost:52774/  0
+2019-09-10 17:40:31,853 [9] WARN Microsoft.AspNetCore.HttpsPolicy.HttpsRedirectionMiddleware - Failed to determine the https port for redirect.
+2019-09-10 17:40:31,895 [7] INFO Microsoft.AspNetCore.Hosting.Internal.WebHost - Request finished in 114.6937ms 200 
+2019-09-10 17:40:31,973 [9] INFO Microsoft.AspNetCore.Routing.EndpointMiddleware - Executing endpoint 'FirstApiSandbox.Controllers.ValuesController.Get (FirstApiSandbox)'
+2019-09-10 17:40:32,021 [9] INFO Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker - Route matched with {action = "Get", controller = "Values"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[System.String]] Get() on controller FirstApiSandbox.Controllers.ValuesController (FirstApiSandbox).
+2019-09-10 17:40:32,046 [9] INFO Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker - Executing action method FirstApiSandbox.Controllers.ValuesController.Get (FirstApiSandbox) - Validation state: Valid
+2019-09-10 17:40:32,063 [9] INFO Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker - Executed action method FirstApiSandbox.Controllers.ValuesController.Get (FirstApiSandbox), returned result Microsoft.AspNetCore.Mvc.ObjectResult in 5.7255ms.
+2019-09-10 17:40:32,089 [9] INFO Microsoft.AspNetCore.Mvc.Infrastructure.ObjectResultExecutor - Executing ObjectResult, writing value of type 'System.String[]'.
+2019-09-10 17:40:32,262 [9] INFO Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker - Executed action FirstApiSandbox.Controllers.ValuesController.Get (FirstApiSandbox) in 232.6279ms
+2019-09-10 17:40:32,271 [9] INFO Microsoft.AspNetCore.Routing.EndpointMiddleware - Executed endpoint 'FirstApiSandbox.Controllers.ValuesController.Get (FirstApiSandbox)'
+2019-09-10 17:40:32,278 [9] INFO FirstApiSandbox.Controllers.BookController - Request Logs!
+2019-09-10 17:40:32,499 [9] INFO Microsoft.AspNetCore.Hosting.Internal.WebHost - Request finished in 564.6783ms 200 application/json; charset=utf-8
+2019-09-10 17:40:34,691 [9] INFO Microsoft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:52774/api/Book  
+2019-09-10 17:40:34,811 [9] INFO Microsoft.AspNetCore.Routing.EndpointMiddleware - Executing endpoint 'FirstApiSandbox.Controllers.BookController.Get (FirstApiSandbox)'
+2019-09-10 17:40:34,835 [9] INFO Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker - Route matched with {action = "Get", controller = "Book"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.List`1[FirstApiSandbox.Model.Book]] Get() on controller FirstApiSandbox.Controllers.BookController (FirstApiSandbox).
+2019-09-10 17:40:34,848 [9] INFO Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker - Executing action method FirstApiSandbox.Controllers.BookController.Get (FirstApiSandbox) - Validation state: Valid
+2019-09-10 17:40:34,861 [9] INFO Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker - Executed action method FirstApiSandbox.Controllers.BookController.Get (FirstApiSandbox), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 3.0388ms.
+2019-09-10 17:40:34,869 [9] INFO Microsoft.AspNetCore.Mvc.Infrastructure.ObjectResultExecutor - Executing ObjectResult, writing value of type 'System.Collections.Generic.List`1[[FirstApiSandbox.Model.Book, FirstApiSandbox, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2019-09-10 17:40:34,905 [9] INFO Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker - Executed action FirstApiSandbox.Controllers.BookController.Get (FirstApiSandbox) in 59.4018ms
+2019-09-10 17:40:34,914 [9] INFO Microsoft.AspNetCore.Routing.EndpointMiddleware - Executed endpoint 'FirstApiSandbox.Controllers.BookController.Get (FirstApiSandbox)'
+2019-09-10 17:40:34,918 [9] INFO FirstApiSandbox.Controllers.BookController - Request Logs!
+2019-09-10 17:40:34,927 [9] INFO Microsoft.AspNetCore.Hosting.Internal.WebHost - Request finished in 237.0923ms 200 application/json; charset=utf-8
+2019-09-10 17:40:37,378 [7] INFO Microsoft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 POST http://localhost:52774/api/Book application/json 80
+2019-09-10 17:40:37,432 [7] INFO Microsoft.AspNetCore.Routing.EndpointMiddleware - Executing endpoint 'FirstApiSandbox.Controllers.BookController.Post (FirstApiSandbox)'
+2019-09-10 17:40:37,464 [7] INFO Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker - Route matched with {action = "Post", controller = "Book"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.ActionResult`1[FirstApiSandbox.Model.Book] Post(FirstApiSandbox.Model.Book) on controller FirstApiSandbox.Controllers.BookController (FirstApiSandbox).
+2019-09-10 17:40:37,520 [7] INFO Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker - Executing action method FirstApiSandbox.Controllers.BookController.Post (FirstApiSandbox) - Validation state: Valid
+2019-09-10 17:40:37,713 [7] INFO Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker - Executed action method FirstApiSandbox.Controllers.BookController.Post (FirstApiSandbox), returned result Microsoft.AspNetCore.Mvc.NotFoundObjectResult in 183.5187ms.
+2019-09-10 17:40:37,725 [7] INFO Microsoft.AspNetCore.Mvc.Infrastructure.ObjectResultExecutor - Executing ObjectResult, writing value of type 'null'.
+2019-09-10 17:40:37,734 [7] INFO Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker - Executed action FirstApiSandbox.Controllers.BookController.Post (FirstApiSandbox) in 261.9696ms
+2019-09-10 17:40:37,747 [7] INFO Microsoft.AspNetCore.Routing.EndpointMiddleware - Executed endpoint 'FirstApiSandbox.Controllers.BookController.Post (FirstApiSandbox)'
+2019-09-10 17:40:37,754 [7] INFO FirstApiSandbox.Controllers.BookController - Request Logs!
+2019-09-10 17:40:37,766 [7] INFO Microsoft.AspNetCore.Hosting.Internal.WebHost - Request finished in 385.657ms 404 
+2019-09-10 17:42:11,288 [1] INFO Microsoft.AspNetCore.DataProtection.KeyManagement.XmlKeyManager - User profile is available. Using 'C:\Users\sramdurg\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2019-09-10 17:42:13,570 [10] INFO Microsoft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:52774/api/values  
+2019-09-10 17:42:13,572 [7] INFO Microsoft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 DEBUG http://localhost:52774/  0
+2019-09-10 17:42:13,584 [9] INFO Microsoft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:52774/api/Book  
+2019-09-10 17:42:13,672 [10] WARN Microsoft.AspNetCore.HttpsPolicy.HttpsRedirectionMiddleware - Failed to determine the https port for redirect.
+2019-09-10 17:42:13,747 [7] INFO Microsoft.AspNetCore.Hosting.Internal.WebHost - Request finished in 180.8716ms 200 
+2019-09-10 17:42:13,862 [10] INFO Microsoft.AspNetCore.Routing.EndpointMiddleware - Executing endpoint 'FirstApiSandbox.Controllers.ValuesController.Get (FirstApiSandbox)'
+2019-09-10 17:42:13,876 [6] INFO Microsoft.AspNetCore.Routing.EndpointMiddleware - Executing endpoint 'FirstApiSandbox.Controllers.BookController.Get (FirstApiSandbox)'
+2019-09-10 17:42:13,944 [10] INFO Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker - Route matched with {action = "Get", controller = "Values"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[System.String]] Get() on controller FirstApiSandbox.Controllers.ValuesController (FirstApiSandbox).
+2019-09-10 17:42:13,957 [6] INFO Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker - Route matched with {action = "Get", controller = "Book"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.List`1[FirstApiSandbox.Model.Book]] Get() on controller FirstApiSandbox.Controllers.BookController (FirstApiSandbox).
+2019-09-10 17:42:13,988 [6] INFO Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker - Executing action method FirstApiSandbox.Controllers.BookController.Get (FirstApiSandbox) - Validation state: Valid
+2019-09-10 17:42:13,995 [10] INFO Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker - Executing action method FirstApiSandbox.Controllers.ValuesController.Get (FirstApiSandbox) - Validation state: Valid
+2019-09-10 17:42:14,010 [6] INFO Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker - Executed action method FirstApiSandbox.Controllers.BookController.Get (FirstApiSandbox), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 2.8475ms.
+2019-09-10 17:42:14,021 [10] INFO Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker - Executed action method FirstApiSandbox.Controllers.ValuesController.Get (FirstApiSandbox), returned result Microsoft.AspNetCore.Mvc.ObjectResult in 3.4597ms.
+2019-09-10 17:42:14,046 [10] INFO Microsoft.AspNetCore.Mvc.Infrastructure.ObjectResultExecutor - Executing ObjectResult, writing value of type 'System.String[]'.
+2019-09-10 17:42:14,049 [6] INFO Microsoft.AspNetCore.Mvc.Infrastructure.ObjectResultExecutor - Executing ObjectResult, writing value of type 'System.Collections.Generic.List`1[[FirstApiSandbox.Model.Book, FirstApiSandbox, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2019-09-10 17:42:14,221 [10] INFO Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker - Executed action FirstApiSandbox.Controllers.ValuesController.Get (FirstApiSandbox) in 235.363ms
+2019-09-10 17:42:14,227 [6] INFO Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker - Executed action FirstApiSandbox.Controllers.BookController.Get (FirstApiSandbox) in 245.5189ms
+2019-09-10 17:42:14,252 [6] INFO Microsoft.AspNetCore.Routing.EndpointMiddleware - Executed endpoint 'FirstApiSandbox.Controllers.BookController.Get (FirstApiSandbox)'
+2019-09-10 17:42:14,256 [10] INFO Microsoft.AspNetCore.Routing.EndpointMiddleware - Executed endpoint 'FirstApiSandbox.Controllers.ValuesController.Get (FirstApiSandbox)'
+2019-09-10 17:42:14,266 [6] INFO FirstApiSandbox.Controllers.BookController - Request Logs!
+2019-09-10 17:42:14,268 [10] INFO FirstApiSandbox.Controllers.BookController - Request Logs!
+2019-09-10 17:42:14,320 [10] INFO Microsoft.AspNetCore.Hosting.Internal.WebHost - Request finished in 732.8414ms 200 application/json; charset=utf-8
+2019-09-10 17:42:14,697 [6] INFO Microsoft.AspNetCore.Hosting.Internal.WebHost - Request finished in 735.8388ms 200 application/json; charset=utf-8
+2019-09-10 17:42:27,602 [6] INFO Microsoft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 POST http://localhost:52774/api/Book application/json 80
+2019-09-10 17:42:27,654 [6] INFO Microsoft.AspNetCore.Routing.EndpointMiddleware - Executing endpoint 'FirstApiSandbox.Controllers.BookController.Post (FirstApiSandbox)'
+2019-09-10 17:42:27,692 [6] INFO Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker - Route matched with {action = "Post", controller = "Book"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.ActionResult`1[FirstApiSandbox.Model.Book] Post(FirstApiSandbox.Model.Book) on controller FirstApiSandbox.Controllers.BookController (FirstApiSandbox).
+2019-09-10 17:42:27,753 [6] INFO Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker - Executing action method FirstApiSandbox.Controllers.BookController.Post (FirstApiSandbox) - Validation state: Valid
+2019-09-10 17:42:27,998 [6] INFO Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker - Executed action method FirstApiSandbox.Controllers.BookController.Post (FirstApiSandbox), returned result Microsoft.AspNetCore.Mvc.NotFoundObjectResult in 223.9519ms.
+2019-09-10 17:42:28,015 [6] INFO Microsoft.AspNetCore.Mvc.Infrastructure.ObjectResultExecutor - Executing ObjectResult, writing value of type 'System.Collections.Generic.List`1[[FluentValidation.Results.ValidationFailure, FluentValidation, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7de548da2fbae0f0]]'.
+2019-09-10 17:42:28,070 [6] INFO Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker - Executed action FirstApiSandbox.Controllers.BookController.Post (FirstApiSandbox) in 367.2236ms
+2019-09-10 17:42:28,083 [6] INFO Microsoft.AspNetCore.Routing.EndpointMiddleware - Executed endpoint 'FirstApiSandbox.Controllers.BookController.Post (FirstApiSandbox)'
+2019-09-10 17:42:28,087 [6] INFO FirstApiSandbox.Controllers.BookController - Request Logs!
+2019-09-10 17:42:28,100 [6] INFO Microsoft.AspNetCore.Hosting.Internal.WebHost - Request finished in 526.2668ms 404 application/json; charset=utf-8
+2019-09-10 17:46:20,667 [1] INFO Microsoft.AspNetCore.DataProtection.KeyManagement.XmlKeyManager - User profile is available. Using 'C:\Users\sramdurg\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2019-09-10 17:46:22,391 [10] INFO Microsoft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:52774/api/Book  
+2019-09-10 17:46:22,393 [6] INFO Microsoft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:52774/api/values  
+2019-09-10 17:46:22,400 [7] INFO Microsoft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 DEBUG http://localhost:52774/  0
+2019-09-10 17:46:22,494 [6] WARN Microsoft.AspNetCore.HttpsPolicy.HttpsRedirectionMiddleware - Failed to determine the https port for redirect.
+2019-09-10 17:46:22,534 [7] INFO Microsoft.AspNetCore.Hosting.Internal.WebHost - Request finished in 138.4032ms 200 
+2019-09-10 17:46:22,622 [6] INFO Microsoft.AspNetCore.Routing.EndpointMiddleware - Executing endpoint 'FirstApiSandbox.Controllers.ValuesController.Get (FirstApiSandbox)'
+2019-09-10 17:46:22,624 [10] INFO Microsoft.AspNetCore.Routing.EndpointMiddleware - Executing endpoint 'FirstApiSandbox.Controllers.BookController.Get (FirstApiSandbox)'
+2019-09-10 17:46:22,703 [10] INFO Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker - Route matched with {action = "Get", controller = "Book"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.List`1[FirstApiSandbox.Model.Book]] Get() on controller FirstApiSandbox.Controllers.BookController (FirstApiSandbox).
+2019-09-10 17:46:22,705 [6] INFO Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker - Route matched with {action = "Get", controller = "Values"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[System.String]] Get() on controller FirstApiSandbox.Controllers.ValuesController (FirstApiSandbox).
+2019-09-10 17:46:22,754 [6] INFO Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker - Executing action method FirstApiSandbox.Controllers.ValuesController.Get (FirstApiSandbox) - Validation state: Valid
+2019-09-10 17:46:22,767 [10] INFO Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker - Executing action method FirstApiSandbox.Controllers.BookController.Get (FirstApiSandbox) - Validation state: Valid
+2019-09-10 17:46:22,783 [10] INFO Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker - Executed action method FirstApiSandbox.Controllers.BookController.Get (FirstApiSandbox), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 4.3507ms.
+2019-09-10 17:46:22,788 [6] INFO Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker - Executed action method FirstApiSandbox.Controllers.ValuesController.Get (FirstApiSandbox), returned result Microsoft.AspNetCore.Mvc.ObjectResult in 0.8223ms.
+2019-09-10 17:46:22,827 [6] INFO Microsoft.AspNetCore.Mvc.Infrastructure.ObjectResultExecutor - Executing ObjectResult, writing value of type 'System.String[]'.
+2019-09-10 17:46:22,829 [10] INFO Microsoft.AspNetCore.Mvc.Infrastructure.ObjectResultExecutor - Executing ObjectResult, writing value of type 'System.Collections.Generic.List`1[[FirstApiSandbox.Model.Book, FirstApiSandbox, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2019-09-10 17:46:23,052 [10] INFO Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker - Executed action FirstApiSandbox.Controllers.BookController.Get (FirstApiSandbox) in 299.6163ms
+2019-09-10 17:46:23,075 [6] INFO Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker - Executed action FirstApiSandbox.Controllers.ValuesController.Get (FirstApiSandbox) in 296.4272ms
+2019-09-10 17:46:23,113 [10] INFO Microsoft.AspNetCore.Routing.EndpointMiddleware - Executed endpoint 'FirstApiSandbox.Controllers.BookController.Get (FirstApiSandbox)'
+2019-09-10 17:46:23,125 [10] INFO FirstApiSandbox.Controllers.BookController - Request Logs!
+2019-09-10 17:46:23,149 [6] INFO Microsoft.AspNetCore.Routing.EndpointMiddleware - Executed endpoint 'FirstApiSandbox.Controllers.ValuesController.Get (FirstApiSandbox)'
+2019-09-10 17:46:23,158 [6] INFO FirstApiSandbox.Controllers.BookController - Request Logs!
+2019-09-10 17:46:23,214 [10] INFO Microsoft.AspNetCore.Hosting.Internal.WebHost - Request finished in 756.1006ms 200 application/json; charset=utf-8
+2019-09-10 17:46:23,277 [6] INFO Microsoft.AspNetCore.Hosting.Internal.WebHost - Request finished in 840.6797ms 200 application/json; charset=utf-8
+2019-09-10 17:46:30,588 [7] INFO Microsoft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 POST http://localhost:52774/api/Book application/json 80
+2019-09-10 17:46:30,648 [7] INFO Microsoft.AspNetCore.Routing.EndpointMiddleware - Executing endpoint 'FirstApiSandbox.Controllers.BookController.Post (FirstApiSandbox)'
+2019-09-10 17:46:30,683 [7] INFO Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker - Route matched with {action = "Post", controller = "Book"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.ActionResult`1[FirstApiSandbox.Model.Book] Post(FirstApiSandbox.Model.Book) on controller FirstApiSandbox.Controllers.BookController (FirstApiSandbox).
+2019-09-10 17:46:30,728 [7] INFO Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker - Executing action method FirstApiSandbox.Controllers.BookController.Post (FirstApiSandbox) - Validation state: Valid
+2019-09-10 17:46:30,910 [7] INFO Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker - Executed action method FirstApiSandbox.Controllers.BookController.Post (FirstApiSandbox), returned result Microsoft.AspNetCore.Mvc.ObjectResult in 173.9114ms.
+2019-09-10 17:46:30,926 [7] INFO Microsoft.AspNetCore.Mvc.Infrastructure.ObjectResultExecutor - Executing ObjectResult, writing value of type 'System.Collections.Generic.List`1[[FluentValidation.Results.ValidationFailure, FluentValidation, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7de548da2fbae0f0]]'.
+2019-09-10 17:46:30,977 [7] INFO Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker - Executed action FirstApiSandbox.Controllers.BookController.Post (FirstApiSandbox) in 279.1326ms
+2019-09-10 17:46:30,991 [7] INFO Microsoft.AspNetCore.Routing.EndpointMiddleware - Executed endpoint 'FirstApiSandbox.Controllers.BookController.Post (FirstApiSandbox)'
+2019-09-10 17:46:30,994 [7] INFO FirstApiSandbox.Controllers.BookController - Request Logs!
+2019-09-10 17:46:31,006 [7] INFO Microsoft.AspNetCore.Hosting.Internal.WebHost - Request finished in 416.8618ms 400 application/json; charset=utf-8
+2019-09-10 17:55:20,933 [1] INFO Microsoft.AspNetCore.DataProtection.KeyManagement.XmlKeyManager - User profile is available. Using 'C:\Users\sramdurg\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2019-09-10 17:55:22,371 [7] INFO Microsoft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:52774/api/values  
+2019-09-10 17:55:22,373 [10] INFO Microsoft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 DEBUG http://localhost:52774/  0
+2019-09-10 17:55:22,598 [7] WARN Microsoft.AspNetCore.HttpsPolicy.HttpsRedirectionMiddleware - Failed to determine the https port for redirect.
+2019-09-10 17:55:22,655 [10] INFO Microsoft.AspNetCore.Hosting.Internal.WebHost - Request finished in 281.0594ms 200 
+2019-09-10 17:55:22,712 [7] INFO Microsoft.AspNetCore.Routing.EndpointMiddleware - Executing endpoint 'FirstApiSandbox.Controllers.ValuesController.Get (FirstApiSandbox)'
+2019-09-10 17:55:22,776 [7] INFO Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker - Route matched with {action = "Get", controller = "Values"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[System.String]] Get() on controller FirstApiSandbox.Controllers.ValuesController (FirstApiSandbox).
+2019-09-10 17:55:22,799 [7] INFO Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker - Executing action method FirstApiSandbox.Controllers.ValuesController.Get (FirstApiSandbox) - Validation state: Valid
+2019-09-10 17:55:22,821 [7] INFO Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker - Executed action method FirstApiSandbox.Controllers.ValuesController.Get (FirstApiSandbox), returned result Microsoft.AspNetCore.Mvc.ObjectResult in 5.7184ms.
+2019-09-10 17:55:22,846 [7] INFO Microsoft.AspNetCore.Mvc.Infrastructure.ObjectResultExecutor - Executing ObjectResult, writing value of type 'System.String[]'.
+2019-09-10 17:55:22,928 [7] INFO Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker - Executed action FirstApiSandbox.Controllers.ValuesController.Get (FirstApiSandbox) in 142.7913ms
+2019-09-10 17:55:22,934 [7] INFO Microsoft.AspNetCore.Routing.EndpointMiddleware - Executed endpoint 'FirstApiSandbox.Controllers.ValuesController.Get (FirstApiSandbox)'
+2019-09-10 17:55:22,940 [7] INFO FirstApiSandbox.Controllers.BookController - Request Logs!
+2019-09-10 17:55:22,970 [7] INFO Microsoft.AspNetCore.Hosting.Internal.WebHost - Request finished in 592.867ms 200 application/json; charset=utf-8
+2019-09-10 17:55:28,197 [10] INFO Microsoft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:52774/api/Book  
+2019-09-10 17:55:28,208 [10] INFO Microsoft.AspNetCore.Routing.EndpointMiddleware - Executing endpoint 'FirstApiSandbox.Controllers.BookController.Get (FirstApiSandbox)'
+2019-09-10 17:55:28,224 [10] INFO Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker - Route matched with {action = "Get", controller = "Book"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.List`1[FirstApiSandbox.Model.Book]] Get() on controller FirstApiSandbox.Controllers.BookController (FirstApiSandbox).
+2019-09-10 17:55:28,249 [10] INFO Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker - Executing action method FirstApiSandbox.Controllers.BookController.Get (FirstApiSandbox) - Validation state: Valid
+2019-09-10 17:55:28,275 [10] INFO Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker - Executed action method FirstApiSandbox.Controllers.BookController.Get (FirstApiSandbox), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 3.0244ms.
+2019-09-10 17:55:28,291 [10] INFO Microsoft.AspNetCore.Mvc.Infrastructure.ObjectResultExecutor - Executing ObjectResult, writing value of type 'System.Collections.Generic.List`1[[FirstApiSandbox.Model.Book, FirstApiSandbox, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2019-09-10 17:55:28,345 [10] INFO Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker - Executed action FirstApiSandbox.Controllers.BookController.Get (FirstApiSandbox) in 103.2894ms
+2019-09-10 17:55:28,356 [10] INFO Microsoft.AspNetCore.Routing.EndpointMiddleware - Executed endpoint 'FirstApiSandbox.Controllers.BookController.Get (FirstApiSandbox)'
+2019-09-10 17:55:28,361 [10] INFO FirstApiSandbox.Controllers.BookController - Request Logs!
+2019-09-10 17:55:28,372 [10] INFO Microsoft.AspNetCore.Hosting.Internal.WebHost - Request finished in 174.1498ms 200 application/json; charset=utf-8
+2019-09-10 17:55:32,417 [7] INFO Microsoft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 POST http://localhost:52774/api/Book application/json 80
+2019-09-10 17:55:32,455 [7] INFO Microsoft.AspNetCore.Routing.EndpointMiddleware - Executing endpoint 'FirstApiSandbox.Controllers.BookController.Post (FirstApiSandbox)'
+2019-09-10 17:55:32,483 [7] INFO Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker - Route matched with {action = "Post", controller = "Book"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.ActionResult`1[FirstApiSandbox.Model.Book] Post(FirstApiSandbox.Model.Book) on controller FirstApiSandbox.Controllers.BookController (FirstApiSandbox).
+2019-09-10 17:55:32,523 [7] INFO Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker - Executing action method FirstApiSandbox.Controllers.BookController.Post (FirstApiSandbox) - Validation state: Valid
+2019-09-10 17:55:32,679 [7] INFO Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker - Executed action method FirstApiSandbox.Controllers.BookController.Post (FirstApiSandbox), returned result Microsoft.AspNetCore.Mvc.ObjectResult in 148.0013ms.
+2019-09-10 17:55:32,695 [7] INFO Microsoft.AspNetCore.Mvc.Infrastructure.ObjectResultExecutor - Executing ObjectResult, writing value of type 'System.Collections.Generic.List`1[[FluentValidation.Results.ValidationFailure, FluentValidation, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7de548da2fbae0f0]]'.
+2019-09-10 17:55:32,726 [7] INFO Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker - Executed action FirstApiSandbox.Controllers.BookController.Post (FirstApiSandbox) in 230.6983ms
+2019-09-10 17:55:32,738 [7] INFO Microsoft.AspNetCore.Routing.EndpointMiddleware - Executed endpoint 'FirstApiSandbox.Controllers.BookController.Post (FirstApiSandbox)'
+2019-09-10 17:55:32,742 [7] INFO FirstApiSandbox.Controllers.BookController - Request Logs!
+2019-09-10 17:55:32,758 [7] INFO Microsoft.AspNetCore.Hosting.Internal.WebHost - Request finished in 335.8117ms 400 application/json; charset=utf-8
+2019-09-10 18:00:21,544 [1] INFO Microsoft.AspNetCore.DataProtection.KeyManagement.XmlKeyManager - User profile is available. Using 'C:\Users\sramdurg\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2019-09-10 18:00:22,984 [10] INFO Microsoft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 DEBUG http://localhost:52774/  0
+2019-09-10 18:00:22,990 [7] INFO Microsoft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:52774/api/values  
+2019-09-10 18:00:23,068 [7] WARN Microsoft.AspNetCore.HttpsPolicy.HttpsRedirectionMiddleware - Failed to determine the https port for redirect.
+2019-09-10 18:00:23,157 [10] INFO Microsoft.AspNetCore.Hosting.Internal.WebHost - Request finished in 130.5697ms 200 
+2019-09-10 18:00:23,267 [7] INFO Microsoft.AspNetCore.Routing.EndpointMiddleware - Executing endpoint 'FirstApiSandbox.Controllers.ValuesController.Get (FirstApiSandbox)'
+2019-09-10 18:00:23,435 [7] INFO Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker - Route matched with {action = "Get", controller = "Values"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[System.String]] Get() on controller FirstApiSandbox.Controllers.ValuesController (FirstApiSandbox).
+2019-09-10 18:00:23,502 [7] INFO Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker - Executing action method FirstApiSandbox.Controllers.ValuesController.Get (FirstApiSandbox) - Validation state: Valid
+2019-09-10 18:00:23,543 [7] INFO Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker - Executed action method FirstApiSandbox.Controllers.ValuesController.Get (FirstApiSandbox), returned result Microsoft.AspNetCore.Mvc.ObjectResult in 1.2121ms.
+2019-09-10 18:00:23,575 [7] INFO Microsoft.AspNetCore.Mvc.Infrastructure.ObjectResultExecutor - Executing ObjectResult, writing value of type 'System.String[]'.
+2019-09-10 18:00:23,907 [7] INFO Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker - Executed action FirstApiSandbox.Controllers.ValuesController.Get (FirstApiSandbox) in 459.2109ms
+2019-09-10 18:00:23,921 [7] INFO Microsoft.AspNetCore.Routing.EndpointMiddleware - Executed endpoint 'FirstApiSandbox.Controllers.ValuesController.Get (FirstApiSandbox)'
+2019-09-10 18:00:23,928 [7] INFO FirstApiSandbox.Controllers.BookController - Request Logs!
+2019-09-10 18:00:23,957 [7] INFO Microsoft.AspNetCore.Hosting.Internal.WebHost - Request finished in 975.374ms 200 application/json; charset=utf-8
+2019-09-10 18:00:26,697 [6] INFO Microsoft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:52774/api/Book  
+2019-09-10 18:00:26,765 [6] INFO Microsoft.AspNetCore.Routing.EndpointMiddleware - Executing endpoint 'FirstApiSandbox.Controllers.BookController.Get (FirstApiSandbox)'
+2019-09-10 18:00:26,781 [6] INFO Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker - Route matched with {action = "Get", controller = "Book"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.List`1[FirstApiSandbox.Model.Book]] Get() on controller FirstApiSandbox.Controllers.BookController (FirstApiSandbox).
+2019-09-10 18:00:26,790 [6] INFO Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker - Executing action method FirstApiSandbox.Controllers.BookController.Get (FirstApiSandbox) - Validation state: Valid
+2019-09-10 18:00:26,805 [6] INFO Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker - Executed action method FirstApiSandbox.Controllers.BookController.Get (FirstApiSandbox), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 2.8514ms.
+2019-09-10 18:00:26,818 [6] INFO Microsoft.AspNetCore.Mvc.Infrastructure.ObjectResultExecutor - Executing ObjectResult, writing value of type 'System.Collections.Generic.List`1[[FirstApiSandbox.Model.Book, FirstApiSandbox, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2019-09-10 18:00:26,858 [6] INFO Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker - Executed action FirstApiSandbox.Controllers.BookController.Get (FirstApiSandbox) in 67.3463ms
+2019-09-10 18:00:26,866 [6] INFO Microsoft.AspNetCore.Routing.EndpointMiddleware - Executed endpoint 'FirstApiSandbox.Controllers.BookController.Get (FirstApiSandbox)'
+2019-09-10 18:00:26,870 [6] INFO FirstApiSandbox.Controllers.BookController - Request Logs!
+2019-09-10 18:00:26,882 [6] INFO Microsoft.AspNetCore.Hosting.Internal.WebHost - Request finished in 206.3832ms 200 application/json; charset=utf-8
+2019-09-10 18:00:30,737 [12] INFO Microsoft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 POST http://localhost:52774/api/Book application/json 80
+2019-09-10 18:00:30,860 [12] INFO Microsoft.AspNetCore.Routing.EndpointMiddleware - Executing endpoint 'FirstApiSandbox.Controllers.BookController.Post (FirstApiSandbox)'
+2019-09-10 18:00:30,904 [12] INFO Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker - Route matched with {action = "Post", controller = "Book"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.ActionResult`1[FirstApiSandbox.Model.Book] Post(FirstApiSandbox.Model.Book) on controller FirstApiSandbox.Controllers.BookController (FirstApiSandbox).
+2019-09-10 18:00:30,968 [12] INFO Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker - Executing action method FirstApiSandbox.Controllers.BookController.Post (FirstApiSandbox) - Validation state: Valid
+2019-09-10 18:02:49,058 [1] INFO Microsoft.AspNetCore.DataProtection.KeyManagement.XmlKeyManager - User profile is available. Using 'C:\Users\sramdurg\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2019-09-10 18:02:52,119 [10] INFO Microsoft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:52774/api/Book  
+2019-09-10 18:02:52,125 [6] INFO Microsoft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:52774/api/values  
+2019-09-10 18:02:52,133 [7] INFO Microsoft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 DEBUG http://localhost:52774/  0
+2019-09-10 18:02:52,290 [6] WARN Microsoft.AspNetCore.HttpsPolicy.HttpsRedirectionMiddleware - Failed to determine the https port for redirect.
+2019-09-10 18:02:52,325 [7] INFO Microsoft.AspNetCore.Hosting.Internal.WebHost - Request finished in 198.9906ms 200 
+2019-09-10 18:02:52,459 [7] INFO Microsoft.AspNetCore.Routing.EndpointMiddleware - Executing endpoint 'FirstApiSandbox.Controllers.BookController.Get (FirstApiSandbox)'
+2019-09-10 18:02:52,462 [6] INFO Microsoft.AspNetCore.Routing.EndpointMiddleware - Executing endpoint 'FirstApiSandbox.Controllers.ValuesController.Get (FirstApiSandbox)'
+2019-09-10 18:02:52,545 [6] INFO Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker - Route matched with {action = "Get", controller = "Values"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[System.String]] Get() on controller FirstApiSandbox.Controllers.ValuesController (FirstApiSandbox).
+2019-09-10 18:02:52,556 [7] INFO Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker - Route matched with {action = "Get", controller = "Book"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.List`1[FirstApiSandbox.Model.Book]] Get() on controller FirstApiSandbox.Controllers.BookController (FirstApiSandbox).
+2019-09-10 18:02:52,586 [7] INFO Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker - Executing action method FirstApiSandbox.Controllers.BookController.Get (FirstApiSandbox) - Validation state: Valid
+2019-09-10 18:02:52,590 [6] INFO Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker - Executing action method FirstApiSandbox.Controllers.ValuesController.Get (FirstApiSandbox) - Validation state: Valid
+2019-09-10 18:02:52,611 [7] INFO Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker - Executed action method FirstApiSandbox.Controllers.BookController.Get (FirstApiSandbox), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 7.2585ms.
+2019-09-10 18:02:52,614 [6] INFO Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker - Executed action method FirstApiSandbox.Controllers.ValuesController.Get (FirstApiSandbox), returned result Microsoft.AspNetCore.Mvc.ObjectResult in 2.7022ms.
+2019-09-10 18:02:52,637 [7] INFO Microsoft.AspNetCore.Mvc.Infrastructure.ObjectResultExecutor - Executing ObjectResult, writing value of type 'System.Collections.Generic.List`1[[FirstApiSandbox.Model.Book, FirstApiSandbox, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2019-09-10 18:02:52,642 [6] INFO Microsoft.AspNetCore.Mvc.Infrastructure.ObjectResultExecutor - Executing ObjectResult, writing value of type 'System.String[]'.
+2019-09-10 18:02:52,785 [6] INFO Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker - Executed action FirstApiSandbox.Controllers.ValuesController.Get (FirstApiSandbox) in 216.0228ms
+2019-09-10 18:02:52,786 [7] INFO Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker - Executed action FirstApiSandbox.Controllers.BookController.Get (FirstApiSandbox) in 208.5666ms
+2019-09-10 18:02:52,799 [6] INFO Microsoft.AspNetCore.Routing.EndpointMiddleware - Executed endpoint 'FirstApiSandbox.Controllers.ValuesController.Get (FirstApiSandbox)'
+2019-09-10 18:02:52,804 [7] INFO Microsoft.AspNetCore.Routing.EndpointMiddleware - Executed endpoint 'FirstApiSandbox.Controllers.BookController.Get (FirstApiSandbox)'
+2019-09-10 18:02:52,811 [7] INFO FirstApiSandbox.Controllers.BookController - Request Logs!
+2019-09-10 18:02:52,812 [6] INFO FirstApiSandbox.Controllers.BookController - Request Logs!
+2019-09-10 18:02:53,059 [6] INFO Microsoft.AspNetCore.Hosting.Internal.WebHost - Request finished in 729.0854ms 200 application/json; charset=utf-8
+2019-09-10 18:02:53,214 [7] INFO Microsoft.AspNetCore.Hosting.Internal.WebHost - Request finished in 729.1324ms 200 application/json; charset=utf-8
+2019-09-10 18:02:55,442 [7] INFO Microsoft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 POST http://localhost:52774/api/Book application/json 80
+2019-09-10 18:02:55,497 [7] INFO Microsoft.AspNetCore.Routing.EndpointMiddleware - Executing endpoint 'FirstApiSandbox.Controllers.BookController.Post (FirstApiSandbox)'
+2019-09-10 18:02:55,543 [7] INFO Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker - Route matched with {action = "Post", controller = "Book"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.ActionResult`1[FirstApiSandbox.Model.Book] Post(FirstApiSandbox.Model.Book) on controller FirstApiSandbox.Controllers.BookController (FirstApiSandbox).
+2019-09-10 18:02:55,612 [7] INFO Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker - Executing action method FirstApiSandbox.Controllers.BookController.Post (FirstApiSandbox) - Validation state: Valid
+2019-09-10 18:09:09,491 [1] INFO Microsoft.AspNetCore.DataProtection.KeyManagement.XmlKeyManager - User profile is available. Using 'C:\Users\sramdurg\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2019-09-10 18:09:12,130 [6] INFO Microsoft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 DEBUG http://localhost:52774/  0
+2019-09-10 18:09:12,137 [7] INFO Microsoft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:52774/api/Book  
+2019-09-10 18:09:12,142 [9] INFO Microsoft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:52774/api/values  
+2019-09-10 18:09:12,219 [9] WARN Microsoft.AspNetCore.HttpsPolicy.HttpsRedirectionMiddleware - Failed to determine the https port for redirect.
+2019-09-10 18:09:12,257 [6] INFO Microsoft.AspNetCore.Hosting.Internal.WebHost - Request finished in 124.077ms 200 
+2019-09-10 18:09:12,358 [10] INFO Microsoft.AspNetCore.Routing.EndpointMiddleware - Executing endpoint 'FirstApiSandbox.Controllers.BookController.Get (FirstApiSandbox)'
+2019-09-10 18:09:12,387 [9] INFO Microsoft.AspNetCore.Routing.EndpointMiddleware - Executing endpoint 'FirstApiSandbox.Controllers.ValuesController.Get (FirstApiSandbox)'
+2019-09-10 18:09:12,452 [10] INFO Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker - Route matched with {action = "Get", controller = "Book"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.List`1[FirstApiSandbox.Model.Book]] Get() on controller FirstApiSandbox.Controllers.BookController (FirstApiSandbox).
+2019-09-10 18:09:12,453 [9] INFO Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker - Route matched with {action = "Get", controller = "Values"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[System.String]] Get() on controller FirstApiSandbox.Controllers.ValuesController (FirstApiSandbox).
+2019-09-10 18:09:12,492 [9] INFO Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker - Executing action method FirstApiSandbox.Controllers.ValuesController.Get (FirstApiSandbox) - Validation state: Valid
+2019-09-10 18:09:12,505 [10] INFO Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker - Executing action method FirstApiSandbox.Controllers.BookController.Get (FirstApiSandbox) - Validation state: Valid
+2019-09-10 18:09:12,534 [9] INFO Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker - Executed action method FirstApiSandbox.Controllers.ValuesController.Get (FirstApiSandbox), returned result Microsoft.AspNetCore.Mvc.ObjectResult in 2.4769ms.
+2019-09-10 18:09:12,536 [10] INFO Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker - Executed action method FirstApiSandbox.Controllers.BookController.Get (FirstApiSandbox), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 15.6564ms.
+2019-09-10 18:09:12,573 [9] INFO Microsoft.AspNetCore.Mvc.Infrastructure.ObjectResultExecutor - Executing ObjectResult, writing value of type 'System.String[]'.
+2019-09-10 18:09:12,589 [10] INFO Microsoft.AspNetCore.Mvc.Infrastructure.ObjectResultExecutor - Executing ObjectResult, writing value of type 'System.Collections.Generic.List`1[[FirstApiSandbox.Model.Book, FirstApiSandbox, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2019-09-10 18:09:12,772 [9] INFO Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker - Executed action FirstApiSandbox.Controllers.ValuesController.Get (FirstApiSandbox) in 298.5734ms
+2019-09-10 18:09:12,786 [10] INFO Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker - Executed action FirstApiSandbox.Controllers.BookController.Get (FirstApiSandbox) in 300.7877ms
+2019-09-10 18:09:12,791 [9] INFO Microsoft.AspNetCore.Routing.EndpointMiddleware - Executed endpoint 'FirstApiSandbox.Controllers.ValuesController.Get (FirstApiSandbox)'
+2019-09-10 18:09:12,810 [9] INFO FirstApiSandbox.Controllers.BookController - Request Logs!
+2019-09-10 18:09:12,827 [10] INFO Microsoft.AspNetCore.Routing.EndpointMiddleware - Executed endpoint 'FirstApiSandbox.Controllers.BookController.Get (FirstApiSandbox)'
+2019-09-10 18:09:12,831 [10] INFO FirstApiSandbox.Controllers.BookController - Request Logs!
+2019-09-10 18:09:12,889 [9] INFO Microsoft.AspNetCore.Hosting.Internal.WebHost - Request finished in 715.4052ms 200 application/json; charset=utf-8
+2019-09-10 18:09:13,263 [10] INFO Microsoft.AspNetCore.Hosting.Internal.WebHost - Request finished in 748.8743ms 200 application/json; charset=utf-8
+2019-09-10 18:09:37,709 [6] INFO Microsoft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 PUT http://localhost:52774/api/Book/EmptyList application/json 82
+2019-09-10 18:09:37,777 [6] INFO Microsoft.AspNetCore.Routing.EndpointMiddleware - Executing endpoint 'FirstApiSandbox.Controllers.BookController.Put (FirstApiSandbox)'
+2019-09-10 18:09:37,841 [6] INFO Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker - Route matched with {action = "Put", controller = "Book"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.ActionResult`1[FirstApiSandbox.Model.Book] Put(System.String, FirstApiSandbox.Model.Book) on controller FirstApiSandbox.Controllers.BookController (FirstApiSandbox).
+2019-09-10 18:09:37,891 [6] INFO Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker - Executing action method FirstApiSandbox.Controllers.BookController.Put (FirstApiSandbox) - Validation state: Valid
+2019-09-10 18:09:38,091 [6] INFO Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker - Executed action method FirstApiSandbox.Controllers.BookController.Put (FirstApiSandbox), returned result Microsoft.AspNetCore.Mvc.NotFoundObjectResult in 181.6199ms.
+2019-09-10 18:09:38,105 [6] INFO Microsoft.AspNetCore.Mvc.Infrastructure.ObjectResultExecutor - Executing ObjectResult, writing value of type 'null'.
+2019-09-10 18:09:38,115 [6] INFO Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker - Executed action FirstApiSandbox.Controllers.BookController.Put (FirstApiSandbox) in 262.3081ms
+2019-09-10 18:09:38,125 [6] INFO Microsoft.AspNetCore.Routing.EndpointMiddleware - Executed endpoint 'FirstApiSandbox.Controllers.BookController.Put (FirstApiSandbox)'
+2019-09-10 18:09:38,130 [6] INFO FirstApiSandbox.Controllers.BookController - Request Logs!
+2019-09-10 18:09:38,164 [6] INFO Microsoft.AspNetCore.Hosting.Internal.WebHost - Request finished in 437.1872ms 404 
+2019-09-10 18:09:48,432 [6] INFO Microsoft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:52774/api/Book  
+2019-09-10 18:09:48,448 [6] INFO Microsoft.AspNetCore.Routing.EndpointMiddleware - Executing endpoint 'FirstApiSandbox.Controllers.BookController.Get (FirstApiSandbox)'
+2019-09-10 18:09:48,467 [6] INFO Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker - Route matched with {action = "Get", controller = "Book"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.List`1[FirstApiSandbox.Model.Book]] Get() on controller FirstApiSandbox.Controllers.BookController (FirstApiSandbox).
+2019-09-10 18:09:48,484 [6] INFO Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker - Executing action method FirstApiSandbox.Controllers.BookController.Get (FirstApiSandbox) - Validation state: Valid
+2019-09-10 18:09:48,497 [6] INFO Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker - Executed action method FirstApiSandbox.Controllers.BookController.Get (FirstApiSandbox), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 0.0731ms.
+2019-09-10 18:09:48,526 [6] INFO Microsoft.AspNetCore.Mvc.Infrastructure.ObjectResultExecutor - Executing ObjectResult, writing value of type 'System.Collections.Generic.List`1[[FirstApiSandbox.Model.Book, FirstApiSandbox, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2019-09-10 18:09:48,567 [6] INFO Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker - Executed action FirstApiSandbox.Controllers.BookController.Get (FirstApiSandbox) in 60.7285ms
+2019-09-10 18:09:48,598 [6] INFO Microsoft.AspNetCore.Routing.EndpointMiddleware - Executed endpoint 'FirstApiSandbox.Controllers.BookController.Get (FirstApiSandbox)'
+2019-09-10 18:09:48,607 [6] INFO FirstApiSandbox.Controllers.BookController - Request Logs!
+2019-09-10 18:09:48,620 [6] INFO Microsoft.AspNetCore.Hosting.Internal.WebHost - Request finished in 194.3969ms 200 application/json; charset=utf-8
+2019-09-10 18:10:02,561 [10] INFO Microsoft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 PUT http://localhost:52774/api/Book/EmptyList application/json 85
+2019-09-10 18:10:02,586 [10] INFO Microsoft.AspNetCore.Routing.EndpointMiddleware - Executing endpoint 'FirstApiSandbox.Controllers.BookController.Put (FirstApiSandbox)'
+2019-09-10 18:10:02,599 [10] INFO Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker - Route matched with {action = "Put", controller = "Book"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.ActionResult`1[FirstApiSandbox.Model.Book] Put(System.String, FirstApiSandbox.Model.Book) on controller FirstApiSandbox.Controllers.BookController (FirstApiSandbox).
+2019-09-10 18:10:02,611 [10] INFO Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker - Executing action method FirstApiSandbox.Controllers.BookController.Put (FirstApiSandbox) - Validation state: Valid
+2019-09-10 18:10:02,621 [10] INFO Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker - Executed action method FirstApiSandbox.Controllers.BookController.Put (FirstApiSandbox), returned result Microsoft.AspNetCore.Mvc.NotFoundObjectResult in 0.6825ms.
+2019-09-10 18:10:02,634 [10] INFO Microsoft.AspNetCore.Mvc.Infrastructure.ObjectResultExecutor - Executing ObjectResult, writing value of type 'null'.
+2019-09-10 18:10:02,646 [10] INFO Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker - Executed action FirstApiSandbox.Controllers.BookController.Put (FirstApiSandbox) in 35.0453ms
+2019-09-10 18:10:02,655 [10] INFO Microsoft.AspNetCore.Routing.EndpointMiddleware - Executed endpoint 'FirstApiSandbox.Controllers.BookController.Put (FirstApiSandbox)'
+2019-09-10 18:10:02,659 [10] INFO FirstApiSandbox.Controllers.BookController - Request Logs!
+2019-09-10 18:10:02,671 [10] INFO Microsoft.AspNetCore.Hosting.Internal.WebHost - Request finished in 159.4647ms 404 
+2019-09-10 18:13:13,783 [1] INFO Microsoft.AspNetCore.DataProtection.KeyManagement.XmlKeyManager - User profile is available. Using 'C:\Users\sramdurg\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2019-09-10 18:13:15,254 [9] INFO Microsoft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:52774/api/values  
+2019-09-10 18:13:15,267 [6] INFO Microsoft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 DEBUG http://localhost:52774/  0
+2019-09-10 18:13:15,271 [7] INFO Microsoft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:52774/api/Book  
+2019-09-10 18:13:15,360 [7] WARN Microsoft.AspNetCore.HttpsPolicy.HttpsRedirectionMiddleware - Failed to determine the https port for redirect.
+2019-09-10 18:13:15,376 [6] INFO Microsoft.AspNetCore.Hosting.Internal.WebHost - Request finished in 128.0303ms 200 
+2019-09-10 18:13:15,485 [7] INFO Microsoft.AspNetCore.Routing.EndpointMiddleware - Executing endpoint 'FirstApiSandbox.Controllers.BookController.Get (FirstApiSandbox)'
+2019-09-10 18:13:15,486 [9] INFO Microsoft.AspNetCore.Routing.EndpointMiddleware - Executing endpoint 'FirstApiSandbox.Controllers.ValuesController.Get (FirstApiSandbox)'
+2019-09-10 18:13:15,536 [7] INFO Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker - Route matched with {action = "Get", controller = "Book"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.List`1[FirstApiSandbox.Model.Book]] Get() on controller FirstApiSandbox.Controllers.BookController (FirstApiSandbox).
+2019-09-10 18:13:15,540 [9] INFO Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker - Route matched with {action = "Get", controller = "Values"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[System.String]] Get() on controller FirstApiSandbox.Controllers.ValuesController (FirstApiSandbox).
+2019-09-10 18:13:15,563 [9] INFO Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker - Executing action method FirstApiSandbox.Controllers.ValuesController.Get (FirstApiSandbox) - Validation state: Valid
+2019-09-10 18:13:15,565 [7] INFO Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker - Executing action method FirstApiSandbox.Controllers.BookController.Get (FirstApiSandbox) - Validation state: Valid
+2019-09-10 18:13:15,579 [7] INFO Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker - Executed action method FirstApiSandbox.Controllers.BookController.Get (FirstApiSandbox), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 4.1749ms.
+2019-09-10 18:13:15,584 [9] INFO Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker - Executed action method FirstApiSandbox.Controllers.ValuesController.Get (FirstApiSandbox), returned result Microsoft.AspNetCore.Mvc.ObjectResult in 0.687ms.
+2019-09-10 18:13:15,612 [9] INFO Microsoft.AspNetCore.Mvc.Infrastructure.ObjectResultExecutor - Executing ObjectResult, writing value of type 'System.String[]'.
+2019-09-10 18:13:15,622 [7] INFO Microsoft.AspNetCore.Mvc.Infrastructure.ObjectResultExecutor - Executing ObjectResult, writing value of type 'System.Collections.Generic.List`1[[FirstApiSandbox.Model.Book, FirstApiSandbox, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2019-09-10 18:13:15,765 [9] INFO Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker - Executed action FirstApiSandbox.Controllers.ValuesController.Get (FirstApiSandbox) in 184.0915ms
+2019-09-10 18:13:15,772 [7] INFO Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker - Executed action FirstApiSandbox.Controllers.BookController.Get (FirstApiSandbox) in 186.0582ms
+2019-09-10 18:13:15,782 [9] INFO Microsoft.AspNetCore.Routing.EndpointMiddleware - Executed endpoint 'FirstApiSandbox.Controllers.ValuesController.Get (FirstApiSandbox)'
+2019-09-10 18:13:15,787 [7] INFO Microsoft.AspNetCore.Routing.EndpointMiddleware - Executed endpoint 'FirstApiSandbox.Controllers.BookController.Get (FirstApiSandbox)'
+2019-09-10 18:13:15,795 [9] INFO FirstApiSandbox.Controllers.BookController - Request Logs!
+2019-09-10 18:13:15,795 [7] INFO FirstApiSandbox.Controllers.BookController - Request Logs!
+2019-09-10 18:13:15,894 [7] INFO Microsoft.AspNetCore.Hosting.Internal.WebHost - Request finished in 573.3473ms 200 application/json; charset=utf-8
+2019-09-10 18:13:16,016 [9] INFO Microsoft.AspNetCore.Hosting.Internal.WebHost - Request finished in 573.3439ms 200 application/json; charset=utf-8
+2019-09-10 18:13:21,254 [7] INFO Microsoft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 PUT http://localhost:52774/api/Book/EmptyList application/json 85
+2019-09-10 18:13:21,289 [7] INFO Microsoft.AspNetCore.Routing.EndpointMiddleware - Executing endpoint 'FirstApiSandbox.Controllers.BookController.Put (FirstApiSandbox)'
+2019-09-10 18:13:21,339 [7] INFO Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker - Route matched with {action = "Put", controller = "Book"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.ActionResult`1[FirstApiSandbox.Model.Book] Put(System.String, FirstApiSandbox.Model.Book) on controller FirstApiSandbox.Controllers.BookController (FirstApiSandbox).
+2019-09-10 18:13:21,399 [7] INFO Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker - Executing action method FirstApiSandbox.Controllers.BookController.Put (FirstApiSandbox) - Validation state: Valid
+2019-09-10 18:13:21,595 [7] INFO Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker - Executed action method FirstApiSandbox.Controllers.BookController.Put (FirstApiSandbox), returned result Microsoft.AspNetCore.Mvc.ObjectResult in 187.2211ms.
+2019-09-10 18:13:21,604 [7] INFO Microsoft.AspNetCore.Mvc.Infrastructure.ObjectResultExecutor - Executing ObjectResult, writing value of type 'System.Collections.Generic.List`1[[FluentValidation.Results.ValidationFailure, FluentValidation, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7de548da2fbae0f0]]'.
+2019-09-10 18:13:21,626 [7] INFO Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker - Executed action FirstApiSandbox.Controllers.BookController.Put (FirstApiSandbox) in 277.1991ms
+2019-09-10 18:13:21,635 [7] INFO Microsoft.AspNetCore.Routing.EndpointMiddleware - Executed endpoint 'FirstApiSandbox.Controllers.BookController.Put (FirstApiSandbox)'
+2019-09-10 18:13:21,639 [7] INFO FirstApiSandbox.Controllers.BookController - Request Logs!
+2019-09-10 18:13:21,645 [7] INFO Microsoft.AspNetCore.Hosting.Internal.WebHost - Request finished in 393.6689ms 400 application/json; charset=utf-8
+2019-09-10 18:13:34,847 [7] INFO Microsoft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 PUT http://localhost:52774/api/Book/EmptyList application/json 76
+2019-09-10 18:13:34,859 [7] INFO Microsoft.AspNetCore.Routing.EndpointMiddleware - Executing endpoint 'FirstApiSandbox.Controllers.BookController.Put (FirstApiSandbox)'
+2019-09-10 18:13:34,870 [7] INFO Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker - Route matched with {action = "Put", controller = "Book"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.ActionResult`1[FirstApiSandbox.Model.Book] Put(System.String, FirstApiSandbox.Model.Book) on controller FirstApiSandbox.Controllers.BookController (FirstApiSandbox).
+2019-09-10 18:13:34,918 [7] INFO Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker - Executing action method FirstApiSandbox.Controllers.BookController.Put (FirstApiSandbox) - Validation state: Valid
+2019-09-10 18:13:34,940 [7] INFO Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker - Executed action method FirstApiSandbox.Controllers.BookController.Put (FirstApiSandbox), returned result Microsoft.AspNetCore.Mvc.ObjectResult in 14.9697ms.
+2019-09-10 18:13:34,955 [7] INFO Microsoft.AspNetCore.Mvc.Infrastructure.ObjectResultExecutor - Executing ObjectResult, writing value of type 'System.Collections.Generic.List`1[[FluentValidation.Results.ValidationFailure, FluentValidation, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7de548da2fbae0f0]]'.
+2019-09-10 18:13:34,965 [7] INFO Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker - Executed action FirstApiSandbox.Controllers.BookController.Put (FirstApiSandbox) in 83.6515ms
+2019-09-10 18:13:34,972 [7] INFO Microsoft.AspNetCore.Routing.EndpointMiddleware - Executed endpoint 'FirstApiSandbox.Controllers.BookController.Put (FirstApiSandbox)'
+2019-09-10 18:13:34,976 [7] INFO FirstApiSandbox.Controllers.BookController - Request Logs!
+2019-09-10 18:13:34,986 [7] INFO Microsoft.AspNetCore.Hosting.Internal.WebHost - Request finished in 140.4317ms 400 application/json; charset=utf-8
+2019-09-10 18:13:47,931 [6] INFO Microsoft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 PUT http://localhost:52774/api/Book/EmptyLis application/json 123
+2019-09-10 18:13:47,946 [6] INFO Microsoft.AspNetCore.Routing.EndpointMiddleware - Executing endpoint 'FirstApiSandbox.Controllers.BookController.Put (FirstApiSandbox)'
+2019-09-10 18:13:47,981 [6] INFO Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker - Route matched with {action = "Put", controller = "Book"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.ActionResult`1[FirstApiSandbox.Model.Book] Put(System.String, FirstApiSandbox.Model.Book) on controller FirstApiSandbox.Controllers.BookController (FirstApiSandbox).
+2019-09-10 18:13:47,998 [6] INFO Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker - Executing action method FirstApiSandbox.Controllers.BookController.Put (FirstApiSandbox) - Validation state: Valid
+2019-09-10 18:13:48,010 [6] INFO Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker - Executed action method FirstApiSandbox.Controllers.BookController.Put (FirstApiSandbox), returned result Microsoft.AspNetCore.Mvc.ObjectResult in 0.4764ms.
+2019-09-10 18:13:48,024 [6] INFO Microsoft.AspNetCore.Mvc.Infrastructure.ObjectResultExecutor - Executing ObjectResult, writing value of type 'System.Collections.Generic.List`1[[FluentValidation.Results.ValidationFailure, FluentValidation, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7de548da2fbae0f0]]'.
+2019-09-10 18:13:48,031 [6] INFO Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker - Executed action FirstApiSandbox.Controllers.BookController.Put (FirstApiSandbox) in 39.4227ms
+2019-09-10 18:13:48,046 [6] INFO Microsoft.AspNetCore.Routing.EndpointMiddleware - Executed endpoint 'FirstApiSandbox.Controllers.BookController.Put (FirstApiSandbox)'
+2019-09-10 18:13:48,052 [6] INFO FirstApiSandbox.Controllers.BookController - Request Logs!
+2019-09-10 18:13:48,062 [6] INFO Microsoft.AspNetCore.Hosting.Internal.WebHost - Request finished in 134.8128ms 400 application/json; charset=utf-8
+2019-09-10 18:13:54,195 [9] INFO Microsoft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 PUT http://localhost:52774/api/Book/EmptyLis application/json 121
+2019-09-10 18:13:54,208 [9] INFO Microsoft.AspNetCore.Routing.EndpointMiddleware - Executing endpoint 'FirstApiSandbox.Controllers.BookController.Put (FirstApiSandbox)'
+2019-09-10 18:13:54,224 [9] INFO Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker - Route matched with {action = "Put", controller = "Book"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.ActionResult`1[FirstApiSandbox.Model.Book] Put(System.String, FirstApiSandbox.Model.Book) on controller FirstApiSandbox.Controllers.BookController (FirstApiSandbox).
+2019-09-10 18:13:54,248 [9] INFO Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker - Executing action method FirstApiSandbox.Controllers.BookController.Put (FirstApiSandbox) - Validation state: Valid
+2019-09-10 18:14:05,121 [9] INFO Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker - Executed action FirstApiSandbox.Controllers.BookController.Put (FirstApiSandbox) in 10870.3439ms
+2019-09-10 18:14:05,169 [9] INFO Microsoft.AspNetCore.Routing.EndpointMiddleware - Executed endpoint 'FirstApiSandbox.Controllers.BookController.Put (FirstApiSandbox)'
+2019-09-10 18:14:05,426 [9] ERROR Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware - An unhandled exception has occurred while executing the request.
+System.ArgumentOutOfRangeException: Index was out of range. Must be non-negative and less than the size of the collection.
+Parameter name: index
+   at System.Collections.Generic.List`1.get_Item(Int32 index)
+   at FirstApiSandbox.Database.BookData.UpdateBookInDatabase(String name, Book newBook) in C:\Users\sramdurg\source\repos\FirstApiSandbox\FirstApiSandbox\Database\BookData.cs:line 37
+   at FirstApiSandbox.Service.BookService.UpdateBookUsingService(String name, Book newBook) in C:\Users\sramdurg\source\repos\FirstApiSandbox\FirstApiSandbox\Service\BookService.cs:line 83
+   at FirstApiSandbox.Controllers.BookController.Put(String name, Book newBook) in C:\Users\sramdurg\source\repos\FirstApiSandbox\FirstApiSandbox\Controllers\BookController.cs:line 63
+   at lambda_method(Closure , Object , Object[] )
+   at Microsoft.Extensions.Internal.ObjectMethodExecutor.Execute(Object target, Object[] parameters)
+   at Microsoft.AspNetCore.Mvc.Internal.ActionMethodExecutor.SyncObjectResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeActionMethodAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeNextActionFilterAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.Rethrow(ActionExecutedContext context)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeInnerFilterAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeNextResourceFilter()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.Rethrow(ResourceExecutedContext context)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeFilterPipelineAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeAsync()
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.Invoke(HttpContext httpContext)
+   at Microsoft.AspNetCore.Routing.EndpointRoutingMiddleware.Invoke(HttpContext httpContext)
+   at FirstApiSandbox.RequestResponseLoggingMiddleware.Invoke(HttpContext context) in C:\Users\sramdurg\source\repos\FirstApiSandbox\FirstApiSandbox\RequestResponseLoggingMiddleware.cs:line 40
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+2019-09-10 18:14:05,497 [9] ERROR Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware - An exception was thrown attempting to display the error page.
+System.ArgumentException: Stream was not writable.
+   at System.IO.StreamWriter..ctor(Stream stream, Encoding encoding, Int32 bufferSize, Boolean leaveOpen)
+   at Microsoft.Extensions.RazorViews.BaseView.ExecuteAsync(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+2019-09-10 18:14:05,522 [9] ERROR Microsoft.AspNetCore.Server.Kestrel - Connection id "0HLPLTHPBQSPA", Request id "0HLPLTHPBQSPA:00000003": An unhandled exception was thrown by the application.
+System.ArgumentOutOfRangeException: Index was out of range. Must be non-negative and less than the size of the collection.
+Parameter name: index
+   at System.Collections.Generic.List`1.get_Item(Int32 index)
+   at FirstApiSandbox.Database.BookData.UpdateBookInDatabase(String name, Book newBook) in C:\Users\sramdurg\source\repos\FirstApiSandbox\FirstApiSandbox\Database\BookData.cs:line 37
+   at FirstApiSandbox.Service.BookService.UpdateBookUsingService(String name, Book newBook) in C:\Users\sramdurg\source\repos\FirstApiSandbox\FirstApiSandbox\Service\BookService.cs:line 83
+   at FirstApiSandbox.Controllers.BookController.Put(String name, Book newBook) in C:\Users\sramdurg\source\repos\FirstApiSandbox\FirstApiSandbox\Controllers\BookController.cs:line 63
+   at lambda_method(Closure , Object , Object[] )
+   at Microsoft.Extensions.Internal.ObjectMethodExecutor.Execute(Object target, Object[] parameters)
+   at Microsoft.AspNetCore.Mvc.Internal.ActionMethodExecutor.SyncObjectResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeActionMethodAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeNextActionFilterAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.Rethrow(ActionExecutedContext context)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeInnerFilterAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeNextResourceFilter()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.Rethrow(ResourceExecutedContext context)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeFilterPipelineAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeAsync()
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.Invoke(HttpContext httpContext)
+   at Microsoft.AspNetCore.Routing.EndpointRoutingMiddleware.Invoke(HttpContext httpContext)
+   at FirstApiSandbox.RequestResponseLoggingMiddleware.Invoke(HttpContext context) in C:\Users\sramdurg\source\repos\FirstApiSandbox\FirstApiSandbox\RequestResponseLoggingMiddleware.cs:line 40
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Server.IISIntegration.IISMiddleware.Invoke(HttpContext httpContext)
+   at Microsoft.AspNetCore.Server.Kestrel.Core.Internal.Http.HttpProtocol.ProcessRequests[TContext](IHttpApplication`1 application)
+2019-09-10 18:14:05,555 [9] INFO Microsoft.AspNetCore.Hosting.Internal.WebHost - Request finished in 11341.3287ms 500 
+2019-09-10 18:31:44,296 [1] INFO Microsoft.AspNetCore.DataProtection.KeyManagement.XmlKeyManager - User profile is available. Using 'C:\Users\sramdurg\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2019-09-10 18:31:46,420 [7] INFO Microsoft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 DEBUG http://localhost:52774/  0
+2019-09-10 18:31:46,429 [9] INFO Microsoft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:52774/api/values  
+2019-09-10 18:31:46,433 [10] INFO Microsoft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:52774/api/Book  
+2019-09-10 18:31:46,549 [10] WARN Microsoft.AspNetCore.HttpsPolicy.HttpsRedirectionMiddleware - Failed to determine the https port for redirect.
+2019-09-10 18:31:46,724 [7] INFO Microsoft.AspNetCore.Hosting.Internal.WebHost - Request finished in 224.2372ms 200 
+2019-09-10 18:31:46,820 [7] INFO Microsoft.AspNetCore.Routing.EndpointMiddleware - Executing endpoint 'FirstApiSandbox.Controllers.BookController.Get (FirstApiSandbox)'
+2019-09-10 18:31:46,864 [9] INFO Microsoft.AspNetCore.Routing.EndpointMiddleware - Executing endpoint 'FirstApiSandbox.Controllers.ValuesController.Get (FirstApiSandbox)'
+2019-09-10 18:31:46,944 [9] INFO Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker - Route matched with {action = "Get", controller = "Values"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[System.String]] Get() on controller FirstApiSandbox.Controllers.ValuesController (FirstApiSandbox).
+2019-09-10 18:31:46,955 [7] INFO Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker - Route matched with {action = "Get", controller = "Book"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.List`1[FirstApiSandbox.Model.Book]] Get() on controller FirstApiSandbox.Controllers.BookController (FirstApiSandbox).
+2019-09-10 18:31:47,008 [9] INFO Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker - Executing action method FirstApiSandbox.Controllers.ValuesController.Get (FirstApiSandbox) - Validation state: Valid
+2019-09-10 18:31:47,027 [7] INFO Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker - Executing action method FirstApiSandbox.Controllers.BookController.Get (FirstApiSandbox) - Validation state: Valid
+2019-09-10 18:31:47,071 [9] INFO Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker - Executed action method FirstApiSandbox.Controllers.ValuesController.Get (FirstApiSandbox), returned result Microsoft.AspNetCore.Mvc.ObjectResult in 1.0681ms.
+2019-09-10 18:31:47,092 [7] INFO Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker - Executed action method FirstApiSandbox.Controllers.BookController.Get (FirstApiSandbox), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 41.3818ms.
+2019-09-10 18:31:47,138 [7] INFO Microsoft.AspNetCore.Mvc.Infrastructure.ObjectResultExecutor - Executing ObjectResult, writing value of type 'System.Collections.Generic.List`1[[FirstApiSandbox.Model.Book, FirstApiSandbox, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2019-09-10 18:31:47,146 [9] INFO Microsoft.AspNetCore.Mvc.Infrastructure.ObjectResultExecutor - Executing ObjectResult, writing value of type 'System.String[]'.
+2019-09-10 18:31:47,288 [7] INFO Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker - Executed action FirstApiSandbox.Controllers.BookController.Get (FirstApiSandbox) in 322.7367ms
+2019-09-10 18:31:47,296 [9] INFO Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker - Executed action FirstApiSandbox.Controllers.ValuesController.Get (FirstApiSandbox) in 329.0827ms
+2019-09-10 18:31:47,306 [7] INFO Microsoft.AspNetCore.Routing.EndpointMiddleware - Executed endpoint 'FirstApiSandbox.Controllers.BookController.Get (FirstApiSandbox)'
+2019-09-10 18:31:47,323 [9] INFO Microsoft.AspNetCore.Routing.EndpointMiddleware - Executed endpoint 'FirstApiSandbox.Controllers.ValuesController.Get (FirstApiSandbox)'
+2019-09-10 18:31:47,330 [7] INFO FirstApiSandbox.Controllers.BookController - Request Logs!
+2019-09-10 18:31:47,330 [9] INFO FirstApiSandbox.Controllers.BookController - Request Logs!
+2019-09-10 18:31:47,660 [9] INFO Microsoft.AspNetCore.Hosting.Internal.WebHost - Request finished in 945.7035ms 200 application/json; charset=utf-8
+2019-09-10 18:31:47,857 [7] INFO Microsoft.AspNetCore.Hosting.Internal.WebHost - Request finished in 945.7594ms 200 application/json; charset=utf-8
+2019-09-10 18:32:09,599 [6] INFO Microsoft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 PUT http://localhost:52774/api/Book/EmptyLis application/json 121
+2019-09-10 18:32:09,650 [6] INFO Microsoft.AspNetCore.Routing.EndpointMiddleware - Executing endpoint 'FirstApiSandbox.Controllers.BookController.Put (FirstApiSandbox)'
+2019-09-10 18:32:09,686 [6] INFO Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker - Route matched with {action = "Put", controller = "Book"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.ActionResult`1[FirstApiSandbox.Model.Book] Put(System.String, FirstApiSandbox.Model.Book) on controller FirstApiSandbox.Controllers.BookController (FirstApiSandbox).
+2019-09-10 18:32:09,740 [6] INFO Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker - Executing action method FirstApiSandbox.Controllers.BookController.Put (FirstApiSandbox) - Validation state: Valid
+2019-09-10 18:32:09,751 [6] INFO Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker - Executed action method FirstApiSandbox.Controllers.BookController.Put (FirstApiSandbox), returned result Microsoft.AspNetCore.Mvc.ObjectResult in 2.793ms.
+2019-09-10 18:32:09,778 [6] INFO Microsoft.AspNetCore.Mvc.Infrastructure.ObjectResultExecutor - Executing ObjectResult, writing value of type 'System.String'.
+2019-09-10 18:32:09,796 [6] INFO Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker - Executed action FirstApiSandbox.Controllers.BookController.Put (FirstApiSandbox) in 93.5001ms
+2019-09-10 18:32:09,809 [6] INFO Microsoft.AspNetCore.Routing.EndpointMiddleware - Executed endpoint 'FirstApiSandbox.Controllers.BookController.Put (FirstApiSandbox)'
+2019-09-10 18:32:09,813 [6] INFO FirstApiSandbox.Controllers.BookController - Request Logs!
+2019-09-10 18:32:09,830 [6] INFO Microsoft.AspNetCore.Hosting.Internal.WebHost - Request finished in 288.8917ms 404 text/plain; charset=utf-8
+2019-09-10 18:32:18,736 [12] INFO Microsoft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 PUT http://localhost:52774/api/Book/EmptyList application/json 121
+2019-09-10 18:32:18,756 [12] INFO Microsoft.AspNetCore.Routing.EndpointMiddleware - Executing endpoint 'FirstApiSandbox.Controllers.BookController.Put (FirstApiSandbox)'
+2019-09-10 18:32:18,788 [12] INFO Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker - Route matched with {action = "Put", controller = "Book"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.ActionResult`1[FirstApiSandbox.Model.Book] Put(System.String, FirstApiSandbox.Model.Book) on controller FirstApiSandbox.Controllers.BookController (FirstApiSandbox).
+2019-09-10 18:32:18,809 [12] INFO Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker - Executing action method FirstApiSandbox.Controllers.BookController.Put (FirstApiSandbox) - Validation state: Valid
+2019-09-10 18:32:19,018 [12] INFO Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker - Executed action method FirstApiSandbox.Controllers.BookController.Put (FirstApiSandbox), returned result Microsoft.AspNetCore.Mvc.ObjectResult in 200.2709ms.
+2019-09-10 18:32:19,027 [12] INFO Microsoft.AspNetCore.Mvc.Infrastructure.ObjectResultExecutor - Executing ObjectResult, writing value of type 'FirstApiSandbox.Model.Book'.
+2019-09-10 18:32:19,037 [12] INFO Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker - Executed action FirstApiSandbox.Controllers.BookController.Put (FirstApiSandbox) in 234.0894ms
+2019-09-10 18:32:19,046 [12] INFO Microsoft.AspNetCore.Routing.EndpointMiddleware - Executed endpoint 'FirstApiSandbox.Controllers.BookController.Put (FirstApiSandbox)'
+2019-09-10 18:32:19,052 [12] INFO FirstApiSandbox.Controllers.BookController - Request Logs!
+2019-09-10 18:32:19,063 [12] INFO Microsoft.AspNetCore.Hosting.Internal.WebHost - Request finished in 332.5367ms 200 application/json; charset=utf-8
+2019-09-10 18:32:22,500 [6] INFO Microsoft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:52774/api/Book  
+2019-09-10 18:32:22,544 [6] INFO Microsoft.AspNetCore.Routing.EndpointMiddleware - Executing endpoint 'FirstApiSandbox.Controllers.BookController.Get (FirstApiSandbox)'
+2019-09-10 18:32:22,564 [6] INFO Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker - Route matched with {action = "Get", controller = "Book"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.List`1[FirstApiSandbox.Model.Book]] Get() on controller FirstApiSandbox.Controllers.BookController (FirstApiSandbox).
+2019-09-10 18:32:22,573 [6] INFO Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker - Executing action method FirstApiSandbox.Controllers.BookController.Get (FirstApiSandbox) - Validation state: Valid
+2019-09-10 18:32:22,584 [6] INFO Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker - Executed action method FirstApiSandbox.Controllers.BookController.Get (FirstApiSandbox), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 0.1228ms.
+2019-09-10 18:32:22,592 [6] INFO Microsoft.AspNetCore.Mvc.Infrastructure.ObjectResultExecutor - Executing ObjectResult, writing value of type 'System.Collections.Generic.List`1[[FirstApiSandbox.Model.Book, FirstApiSandbox, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2019-09-10 18:32:22,605 [6] INFO Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker - Executed action FirstApiSandbox.Controllers.BookController.Get (FirstApiSandbox) in 31.3745ms
+2019-09-10 18:32:22,617 [6] INFO Microsoft.AspNetCore.Routing.EndpointMiddleware - Executed endpoint 'FirstApiSandbox.Controllers.BookController.Get (FirstApiSandbox)'
+2019-09-10 18:32:22,622 [6] INFO FirstApiSandbox.Controllers.BookController - Request Logs!
+2019-09-10 18:32:22,637 [6] INFO Microsoft.AspNetCore.Hosting.Internal.WebHost - Request finished in 143.8496ms 200 application/json; charset=utf-8
+2019-09-10 18:35:37,991 [1] INFO Microsoft.AspNetCore.DataProtection.KeyManagement.XmlKeyManager - User profile is available. Using 'C:\Users\sramdurg\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2019-09-10 18:35:39,644 [6] INFO Microsoft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 DEBUG http://localhost:52774/  0
+2019-09-10 18:35:39,652 [7] INFO Microsoft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:52774/api/Book  
+2019-09-10 18:35:39,657 [10] INFO Microsoft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:52774/api/values  
+2019-09-10 18:35:39,741 [7] WARN Microsoft.AspNetCore.HttpsPolicy.HttpsRedirectionMiddleware - Failed to determine the https port for redirect.
+2019-09-10 18:35:39,814 [6] INFO Microsoft.AspNetCore.Hosting.Internal.WebHost - Request finished in 168.948ms 200 
+2019-09-10 18:35:39,945 [6] INFO Microsoft.AspNetCore.Routing.EndpointMiddleware - Executing endpoint 'FirstApiSandbox.Controllers.ValuesController.Get (FirstApiSandbox)'
+2019-09-10 18:35:39,953 [7] INFO Microsoft.AspNetCore.Routing.EndpointMiddleware - Executing endpoint 'FirstApiSandbox.Controllers.BookController.Get (FirstApiSandbox)'
+2019-09-10 18:35:40,039 [6] INFO Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker - Route matched with {action = "Get", controller = "Values"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[System.String]] Get() on controller FirstApiSandbox.Controllers.ValuesController (FirstApiSandbox).
+2019-09-10 18:35:40,084 [7] INFO Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker - Route matched with {action = "Get", controller = "Book"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.List`1[FirstApiSandbox.Model.Book]] Get() on controller FirstApiSandbox.Controllers.BookController (FirstApiSandbox).
+2019-09-10 18:35:40,116 [6] INFO Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker - Executing action method FirstApiSandbox.Controllers.ValuesController.Get (FirstApiSandbox) - Validation state: Valid
+2019-09-10 18:35:40,132 [7] INFO Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker - Executing action method FirstApiSandbox.Controllers.BookController.Get (FirstApiSandbox) - Validation state: Valid
+2019-09-10 18:35:40,182 [7] INFO Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker - Executed action method FirstApiSandbox.Controllers.BookController.Get (FirstApiSandbox), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 4.3648ms.
+2019-09-10 18:35:40,186 [6] INFO Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker - Executed action method FirstApiSandbox.Controllers.ValuesController.Get (FirstApiSandbox), returned result Microsoft.AspNetCore.Mvc.ObjectResult in 0.7102ms.
+2019-09-10 18:35:40,226 [7] INFO Microsoft.AspNetCore.Mvc.Infrastructure.ObjectResultExecutor - Executing ObjectResult, writing value of type 'System.Collections.Generic.List`1[[FirstApiSandbox.Model.Book, FirstApiSandbox, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2019-09-10 18:35:40,231 [6] INFO Microsoft.AspNetCore.Mvc.Infrastructure.ObjectResultExecutor - Executing ObjectResult, writing value of type 'System.String[]'.
+2019-09-10 18:35:40,348 [6] INFO Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker - Executed action FirstApiSandbox.Controllers.ValuesController.Get (FirstApiSandbox) in 284.6669ms
+2019-09-10 18:35:40,350 [7] INFO Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker - Executed action FirstApiSandbox.Controllers.BookController.Get (FirstApiSandbox) in 256.5018ms
+2019-09-10 18:35:40,360 [6] INFO Microsoft.AspNetCore.Routing.EndpointMiddleware - Executed endpoint 'FirstApiSandbox.Controllers.ValuesController.Get (FirstApiSandbox)'
+2019-09-10 18:35:40,373 [7] INFO Microsoft.AspNetCore.Routing.EndpointMiddleware - Executed endpoint 'FirstApiSandbox.Controllers.BookController.Get (FirstApiSandbox)'
+2019-09-10 18:35:40,380 [6] INFO FirstApiSandbox.Controllers.BookController - Request Logs!
+2019-09-10 18:35:40,380 [7] INFO FirstApiSandbox.Controllers.BookController - Request Logs!
+2019-09-10 18:35:40,465 [7] INFO Microsoft.AspNetCore.Hosting.Internal.WebHost - Request finished in 777.2691ms 200 application/json; charset=utf-8
+2019-09-10 18:35:40,493 [6] INFO Microsoft.AspNetCore.Hosting.Internal.WebHost - Request finished in 781.9312ms 200 application/json; charset=utf-8
+2019-09-10 18:36:02,506 [6] INFO Microsoft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 DELETE http://localhost:52774/api/Book/EmptyList  0
+2019-09-10 18:36:02,594 [6] INFO Microsoft.AspNetCore.Routing.EndpointMiddleware - Executing endpoint 'FirstApiSandbox.Controllers.BookController.Delete (FirstApiSandbox)'
+2019-09-10 18:36:02,658 [6] INFO Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker - Route matched with {action = "Delete", controller = "Book"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.ActionResult Delete(System.String) on controller FirstApiSandbox.Controllers.BookController (FirstApiSandbox).
+2019-09-10 18:36:02,708 [6] INFO Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker - Executing action method FirstApiSandbox.Controllers.BookController.Delete (FirstApiSandbox) - Validation state: Valid
+2019-09-10 18:36:02,723 [6] INFO Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker - Executed action method FirstApiSandbox.Controllers.BookController.Delete (FirstApiSandbox), returned result Microsoft.AspNetCore.Mvc.ObjectResult in 8.446ms.
+2019-09-10 18:36:02,730 [6] INFO Microsoft.AspNetCore.Mvc.Infrastructure.ObjectResultExecutor - Executing ObjectResult, writing value of type 'System.String'.
+2019-09-10 18:36:02,743 [6] INFO Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker - Executed action FirstApiSandbox.Controllers.BookController.Delete (FirstApiSandbox) in 66.4893ms
+2019-09-10 18:36:02,761 [6] INFO Microsoft.AspNetCore.Routing.EndpointMiddleware - Executed endpoint 'FirstApiSandbox.Controllers.BookController.Delete (FirstApiSandbox)'
+2019-09-10 18:36:02,770 [6] INFO FirstApiSandbox.Controllers.BookController - Request Logs!
+2019-09-10 18:36:02,779 [6] INFO Microsoft.AspNetCore.Hosting.Internal.WebHost - Request finished in 283.9913ms 404 text/plain; charset=utf-8
+2019-09-10 18:36:24,201 [7] INFO Microsoft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 POST http://localhost:52774/api/Book application/json 82
+2019-09-10 18:36:24,251 [7] INFO Microsoft.AspNetCore.Routing.EndpointMiddleware - Executing endpoint 'FirstApiSandbox.Controllers.BookController.Post (FirstApiSandbox)'
+2019-09-10 18:36:24,283 [7] INFO Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker - Route matched with {action = "Post", controller = "Book"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.ActionResult`1[FirstApiSandbox.Model.Book] Post(FirstApiSandbox.Model.Book) on controller FirstApiSandbox.Controllers.BookController (FirstApiSandbox).
+2019-09-10 18:36:24,319 [7] INFO Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker - Executing action method FirstApiSandbox.Controllers.BookController.Post (FirstApiSandbox) - Validation state: Valid
+2019-09-10 18:36:24,464 [7] INFO Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker - Executed action method FirstApiSandbox.Controllers.BookController.Post (FirstApiSandbox), returned result Microsoft.AspNetCore.Mvc.ObjectResult in 135.709ms.
+2019-09-10 18:36:24,473 [7] INFO Microsoft.AspNetCore.Mvc.Infrastructure.ObjectResultExecutor - Executing ObjectResult, writing value of type 'FirstApiSandbox.Model.Book'.
+2019-09-10 18:36:24,484 [7] INFO Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker - Executed action FirstApiSandbox.Controllers.BookController.Post (FirstApiSandbox) in 186.9473ms
+2019-09-10 18:36:24,496 [7] INFO Microsoft.AspNetCore.Routing.EndpointMiddleware - Executed endpoint 'FirstApiSandbox.Controllers.BookController.Post (FirstApiSandbox)'
+2019-09-10 18:36:24,499 [7] INFO FirstApiSandbox.Controllers.BookController - Request Logs!
+2019-09-10 18:36:24,544 [7] INFO Microsoft.AspNetCore.Hosting.Internal.WebHost - Request finished in 306.7229ms 200 application/json; charset=utf-8
+2019-09-10 18:36:28,250 [7] INFO Microsoft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:52774/api/Book  
+2019-09-10 18:36:28,262 [7] INFO Microsoft.AspNetCore.Routing.EndpointMiddleware - Executing endpoint 'FirstApiSandbox.Controllers.BookController.Get (FirstApiSandbox)'
+2019-09-10 18:36:28,271 [7] INFO Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker - Route matched with {action = "Get", controller = "Book"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.List`1[FirstApiSandbox.Model.Book]] Get() on controller FirstApiSandbox.Controllers.BookController (FirstApiSandbox).
+2019-09-10 18:36:28,292 [7] INFO Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker - Executing action method FirstApiSandbox.Controllers.BookController.Get (FirstApiSandbox) - Validation state: Valid
+2019-09-10 18:36:28,307 [7] INFO Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker - Executed action method FirstApiSandbox.Controllers.BookController.Get (FirstApiSandbox), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 0.0635ms.
+2019-09-10 18:36:28,317 [7] INFO Microsoft.AspNetCore.Mvc.Infrastructure.ObjectResultExecutor - Executing ObjectResult, writing value of type 'System.Collections.Generic.List`1[[FirstApiSandbox.Model.Book, FirstApiSandbox, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2019-09-10 18:36:28,325 [7] INFO Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker - Executed action FirstApiSandbox.Controllers.BookController.Get (FirstApiSandbox) in 41.2122ms
+2019-09-10 18:36:28,335 [7] INFO Microsoft.AspNetCore.Routing.EndpointMiddleware - Executed endpoint 'FirstApiSandbox.Controllers.BookController.Get (FirstApiSandbox)'
+2019-09-10 18:36:28,339 [7] INFO FirstApiSandbox.Controllers.BookController - Request Logs!
+2019-09-10 18:36:28,352 [7] INFO Microsoft.AspNetCore.Hosting.Internal.WebHost - Request finished in 108.0388ms 200 application/json; charset=utf-8
+2019-09-10 18:36:38,402 [7] INFO Microsoft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 POST http://localhost:52774/api/Book application/json 93
+2019-09-10 18:36:38,413 [7] INFO Microsoft.AspNetCore.Routing.EndpointMiddleware - Executing endpoint 'FirstApiSandbox.Controllers.BookController.Post (FirstApiSandbox)'
+2019-09-10 18:36:38,422 [7] INFO Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker - Route matched with {action = "Post", controller = "Book"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.ActionResult`1[FirstApiSandbox.Model.Book] Post(FirstApiSandbox.Model.Book) on controller FirstApiSandbox.Controllers.BookController (FirstApiSandbox).
+2019-09-10 18:36:38,432 [7] INFO Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker - Executing action method FirstApiSandbox.Controllers.BookController.Post (FirstApiSandbox) - Validation state: Valid
+2019-09-10 18:36:38,467 [7] INFO Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker - Executed action method FirstApiSandbox.Controllers.BookController.Post (FirstApiSandbox), returned result Microsoft.AspNetCore.Mvc.ObjectResult in 22.3971ms.
+2019-09-10 18:36:38,475 [7] INFO Microsoft.AspNetCore.Mvc.Infrastructure.ObjectResultExecutor - Executing ObjectResult, writing value of type 'FirstApiSandbox.Model.Book'.
+2019-09-10 18:36:38,505 [7] INFO Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker - Executed action FirstApiSandbox.Controllers.BookController.Post (FirstApiSandbox) in 61.9046ms
+2019-09-10 18:36:38,519 [7] INFO Microsoft.AspNetCore.Routing.EndpointMiddleware - Executed endpoint 'FirstApiSandbox.Controllers.BookController.Post (FirstApiSandbox)'
+2019-09-10 18:36:38,523 [7] INFO FirstApiSandbox.Controllers.BookController - Request Logs!
+2019-09-10 18:36:38,538 [7] INFO Microsoft.AspNetCore.Hosting.Internal.WebHost - Request finished in 139.8377ms 200 application/json; charset=utf-8
+2019-09-10 18:36:48,027 [6] INFO Microsoft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:52774/api/Book  
+2019-09-10 18:36:48,038 [6] INFO Microsoft.AspNetCore.Routing.EndpointMiddleware - Executing endpoint 'FirstApiSandbox.Controllers.BookController.Get (FirstApiSandbox)'
+2019-09-10 18:36:48,046 [6] INFO Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker - Route matched with {action = "Get", controller = "Book"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.List`1[FirstApiSandbox.Model.Book]] Get() on controller FirstApiSandbox.Controllers.BookController (FirstApiSandbox).
+2019-09-10 18:36:48,059 [6] INFO Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker - Executing action method FirstApiSandbox.Controllers.BookController.Get (FirstApiSandbox) - Validation state: Valid
+2019-09-10 18:36:48,065 [6] INFO Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker - Executed action method FirstApiSandbox.Controllers.BookController.Get (FirstApiSandbox), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 0.0203ms.
+2019-09-10 18:36:48,075 [6] INFO Microsoft.AspNetCore.Mvc.Infrastructure.ObjectResultExecutor - Executing ObjectResult, writing value of type 'System.Collections.Generic.List`1[[FirstApiSandbox.Model.Book, FirstApiSandbox, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2019-09-10 18:36:48,094 [6] INFO Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker - Executed action FirstApiSandbox.Controllers.BookController.Get (FirstApiSandbox) in 25.7625ms
+2019-09-10 18:36:48,106 [6] INFO Microsoft.AspNetCore.Routing.EndpointMiddleware - Executed endpoint 'FirstApiSandbox.Controllers.BookController.Get (FirstApiSandbox)'
+2019-09-10 18:36:48,110 [6] INFO FirstApiSandbox.Controllers.BookController - Request Logs!
+2019-09-10 18:36:48,121 [6] INFO Microsoft.AspNetCore.Hosting.Internal.WebHost - Request finished in 122.6236ms 200 application/json; charset=utf-8
+2019-09-10 18:36:55,114 [6] INFO Microsoft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 DELETE http://localhost:52774/api/Book/EmptyList45  0
+2019-09-10 18:36:55,123 [6] INFO Microsoft.AspNetCore.Routing.EndpointMiddleware - Executing endpoint 'FirstApiSandbox.Controllers.BookController.Delete (FirstApiSandbox)'
+2019-09-10 18:36:55,134 [6] INFO Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker - Route matched with {action = "Delete", controller = "Book"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.ActionResult Delete(System.String) on controller FirstApiSandbox.Controllers.BookController (FirstApiSandbox).
+2019-09-10 18:36:55,149 [6] INFO Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker - Executing action method FirstApiSandbox.Controllers.BookController.Delete (FirstApiSandbox) - Validation state: Valid
+2019-09-10 18:36:55,189 [6] INFO Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker - Executed action method FirstApiSandbox.Controllers.BookController.Delete (FirstApiSandbox), returned result Microsoft.AspNetCore.Mvc.ObjectResult in 1.7542ms.
+2019-09-10 18:36:55,203 [6] INFO Microsoft.AspNetCore.Mvc.Infrastructure.ObjectResultExecutor - Executing ObjectResult, writing value of type 'System.String'.
+2019-09-10 18:36:55,216 [6] INFO Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker - Executed action FirstApiSandbox.Controllers.BookController.Delete (FirstApiSandbox) in 70.3532ms
+2019-09-10 18:36:55,224 [6] INFO Microsoft.AspNetCore.Routing.EndpointMiddleware - Executed endpoint 'FirstApiSandbox.Controllers.BookController.Delete (FirstApiSandbox)'
+2019-09-10 18:36:55,230 [6] INFO FirstApiSandbox.Controllers.BookController - Request Logs!
+2019-09-10 18:36:55,238 [6] INFO Microsoft.AspNetCore.Hosting.Internal.WebHost - Request finished in 141.3201ms 404 text/plain; charset=utf-8
+2019-09-10 18:43:39,107 [1] INFO Microsoft.AspNetCore.DataProtection.KeyManagement.XmlKeyManager - User profile is available. Using 'C:\Users\sramdurg\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2019-09-10 18:43:40,339 [10] INFO Microsoft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 DEBUG http://localhost:52774/  0
+2019-09-10 18:43:40,341 [6] INFO Microsoft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:52774/api/values  
+2019-09-10 18:43:40,436 [6] WARN Microsoft.AspNetCore.HttpsPolicy.HttpsRedirectionMiddleware - Failed to determine the https port for redirect.
+2019-09-10 18:43:40,465 [10] INFO Microsoft.AspNetCore.Hosting.Internal.WebHost - Request finished in 123.7907ms 200 
+2019-09-10 18:43:40,543 [6] INFO Microsoft.AspNetCore.Routing.EndpointMiddleware - Executing endpoint 'FirstApiSandbox.Controllers.ValuesController.Get (FirstApiSandbox)'
+2019-09-10 18:43:40,598 [6] INFO Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker - Route matched with {action = "Get", controller = "Values"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[System.String]] Get() on controller FirstApiSandbox.Controllers.ValuesController (FirstApiSandbox).
+2019-09-10 18:43:40,625 [6] INFO Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker - Executing action method FirstApiSandbox.Controllers.ValuesController.Get (FirstApiSandbox) - Validation state: Valid
+2019-09-10 18:43:40,634 [6] INFO Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker - Executed action method FirstApiSandbox.Controllers.ValuesController.Get (FirstApiSandbox), returned result Microsoft.AspNetCore.Mvc.ObjectResult in 0.536ms.
+2019-09-10 18:43:40,651 [6] INFO Microsoft.AspNetCore.Mvc.Infrastructure.ObjectResultExecutor - Executing ObjectResult, writing value of type 'System.String[]'.
+2019-09-10 18:43:40,764 [6] INFO Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker - Executed action FirstApiSandbox.Controllers.ValuesController.Get (FirstApiSandbox) in 147.1093ms
+2019-09-10 18:43:40,770 [6] INFO Microsoft.AspNetCore.Routing.EndpointMiddleware - Executed endpoint 'FirstApiSandbox.Controllers.ValuesController.Get (FirstApiSandbox)'
+2019-09-10 18:43:40,777 [6] INFO FirstApiSandbox.Controllers.BookController - Request Logs!
+2019-09-10 18:43:40,812 [6] INFO Microsoft.AspNetCore.Hosting.Internal.WebHost - Request finished in 472.2444ms 200 application/json; charset=utf-8
+2019-09-10 18:43:51,060 [6] INFO Microsoft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:52774/api/Book  
+2019-09-10 18:43:51,107 [6] INFO Microsoft.AspNetCore.Routing.EndpointMiddleware - Executing endpoint 'FirstApiSandbox.Controllers.BookController.Get (FirstApiSandbox)'
+2019-09-10 18:43:51,149 [6] INFO Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker - Route matched with {action = "Get", controller = "Book"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.List`1[FirstApiSandbox.Model.Book]] Get() on controller FirstApiSandbox.Controllers.BookController (FirstApiSandbox).
+2019-09-10 18:43:51,165 [6] INFO Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker - Executing action method FirstApiSandbox.Controllers.BookController.Get (FirstApiSandbox) - Validation state: Valid
+2019-09-10 18:43:51,190 [6] INFO Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker - Executed action method FirstApiSandbox.Controllers.BookController.Get (FirstApiSandbox), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 4.0662ms.
+2019-09-10 18:43:51,232 [6] INFO Microsoft.AspNetCore.Mvc.Infrastructure.ObjectResultExecutor - Executing ObjectResult, writing value of type 'System.Collections.Generic.List`1[[FirstApiSandbox.Model.Book, FirstApiSandbox, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2019-09-10 18:43:51,269 [6] INFO Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker - Executed action FirstApiSandbox.Controllers.BookController.Get (FirstApiSandbox) in 105.4556ms
+2019-09-10 18:43:51,277 [6] INFO Microsoft.AspNetCore.Routing.EndpointMiddleware - Executed endpoint 'FirstApiSandbox.Controllers.BookController.Get (FirstApiSandbox)'
+2019-09-10 18:43:51,280 [6] INFO FirstApiSandbox.Controllers.BookController - Request Logs!
+2019-09-10 18:43:51,295 [6] INFO Microsoft.AspNetCore.Hosting.Internal.WebHost - Request finished in 244.9748ms 200 application/json; charset=utf-8
+2019-09-10 18:44:09,163 [7] INFO Microsoft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 DELETE http://localhost:52774/api/Book/EmptyList  0
+2019-09-10 18:44:09,178 [7] INFO Microsoft.AspNetCore.Routing.EndpointMiddleware - Executing endpoint 'FirstApiSandbox.Controllers.BookController.Delete (FirstApiSandbox)'
+2019-09-10 18:44:09,227 [7] INFO Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker - Route matched with {action = "Delete", controller = "Book"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.ActionResult Delete(System.String) on controller FirstApiSandbox.Controllers.BookController (FirstApiSandbox).
+2019-09-10 18:44:09,256 [7] INFO Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker - Executing action method FirstApiSandbox.Controllers.BookController.Delete (FirstApiSandbox) - Validation state: Valid
+2019-09-10 18:44:09,266 [7] INFO Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker - Executed action method FirstApiSandbox.Controllers.BookController.Delete (FirstApiSandbox), returned result Microsoft.AspNetCore.Mvc.ObjectResult in 3.9452ms.
+2019-09-10 18:44:09,283 [7] INFO Microsoft.AspNetCore.Mvc.Infrastructure.ObjectResultExecutor - Executing ObjectResult, writing value of type 'System.String'.
+2019-09-10 18:44:09,292 [7] INFO Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker - Executed action FirstApiSandbox.Controllers.BookController.Delete (FirstApiSandbox) in 53.3504ms
+2019-09-10 18:44:09,305 [7] INFO Microsoft.AspNetCore.Routing.EndpointMiddleware - Executed endpoint 'FirstApiSandbox.Controllers.BookController.Delete (FirstApiSandbox)'
+2019-09-10 18:44:09,314 [7] INFO FirstApiSandbox.Controllers.BookController - Request Logs!
+2019-09-10 18:44:09,323 [7] INFO Microsoft.AspNetCore.Hosting.Internal.WebHost - Request finished in 160.1289ms 404 text/plain; charset=utf-8
+2019-09-10 18:44:15,701 [6] INFO Microsoft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:52774/api/Book  
+2019-09-10 18:44:15,712 [6] INFO Microsoft.AspNetCore.Routing.EndpointMiddleware - Executing endpoint 'FirstApiSandbox.Controllers.BookController.Get (FirstApiSandbox)'
+2019-09-10 18:44:15,722 [6] INFO Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker - Route matched with {action = "Get", controller = "Book"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.List`1[FirstApiSandbox.Model.Book]] Get() on controller FirstApiSandbox.Controllers.BookController (FirstApiSandbox).
+2019-09-10 18:44:15,731 [6] INFO Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker - Executing action method FirstApiSandbox.Controllers.BookController.Get (FirstApiSandbox) - Validation state: Valid
+2019-09-10 18:44:15,755 [6] INFO Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker - Executed action method FirstApiSandbox.Controllers.BookController.Get (FirstApiSandbox), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 0.1124ms.
+2019-09-10 18:44:15,771 [6] INFO Microsoft.AspNetCore.Mvc.Infrastructure.ObjectResultExecutor - Executing ObjectResult, writing value of type 'System.Collections.Generic.List`1[[FirstApiSandbox.Model.Book, FirstApiSandbox, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2019-09-10 18:44:15,780 [6] INFO Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker - Executed action FirstApiSandbox.Controllers.BookController.Get (FirstApiSandbox) in 49.3414ms
+2019-09-10 18:44:15,789 [6] INFO Microsoft.AspNetCore.Routing.EndpointMiddleware - Executed endpoint 'FirstApiSandbox.Controllers.BookController.Get (FirstApiSandbox)'
+2019-09-10 18:44:15,792 [6] INFO FirstApiSandbox.Controllers.BookController - Request Logs!
+2019-09-10 18:44:15,810 [6] INFO Microsoft.AspNetCore.Hosting.Internal.WebHost - Request finished in 102.1613ms 200 application/json; charset=utf-8
+2019-09-10 18:45:29,102 [1] INFO Microsoft.AspNetCore.DataProtection.KeyManagement.XmlKeyManager - User profile is available. Using 'C:\Users\sramdurg\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2019-09-10 18:45:31,517 [6] INFO Microsoft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:52774/api/Book  
+2019-09-10 18:45:31,522 [7] INFO Microsoft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:52774/api/values  
+2019-09-10 18:45:31,548 [10] INFO Microsoft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 DEBUG http://localhost:52774/  0
+2019-09-10 18:45:31,640 [6] WARN Microsoft.AspNetCore.HttpsPolicy.HttpsRedirectionMiddleware - Failed to determine the https port for redirect.
+2019-09-10 18:45:31,762 [10] INFO Microsoft.AspNetCore.Hosting.Internal.WebHost - Request finished in 234.2215ms 200 
+2019-09-10 18:45:31,826 [10] INFO Microsoft.AspNetCore.Routing.EndpointMiddleware - Executing endpoint 'FirstApiSandbox.Controllers.BookController.Get (FirstApiSandbox)'
+2019-09-10 18:45:31,832 [7] INFO Microsoft.AspNetCore.Routing.EndpointMiddleware - Executing endpoint 'FirstApiSandbox.Controllers.ValuesController.Get (FirstApiSandbox)'
+2019-09-10 18:45:31,970 [10] INFO Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker - Route matched with {action = "Get", controller = "Book"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.List`1[FirstApiSandbox.Model.Book]] Get() on controller FirstApiSandbox.Controllers.BookController (FirstApiSandbox).
+2019-09-10 18:45:31,983 [7] INFO Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker - Route matched with {action = "Get", controller = "Values"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[System.String]] Get() on controller FirstApiSandbox.Controllers.ValuesController (FirstApiSandbox).
+2019-09-10 18:45:32,014 [10] INFO Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker - Executing action method FirstApiSandbox.Controllers.BookController.Get (FirstApiSandbox) - Validation state: Valid
+2019-09-10 18:45:32,029 [7] INFO Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker - Executing action method FirstApiSandbox.Controllers.ValuesController.Get (FirstApiSandbox) - Validation state: Valid
+2019-09-10 18:45:32,055 [7] INFO Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker - Executed action method FirstApiSandbox.Controllers.ValuesController.Get (FirstApiSandbox), returned result Microsoft.AspNetCore.Mvc.ObjectResult in 0.5496ms.
+2019-09-10 18:45:32,061 [10] INFO Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker - Executed action method FirstApiSandbox.Controllers.BookController.Get (FirstApiSandbox), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 7.1785ms.
+2019-09-10 18:45:32,103 [10] INFO Microsoft.AspNetCore.Mvc.Infrastructure.ObjectResultExecutor - Executing ObjectResult, writing value of type 'System.Collections.Generic.List`1[[FirstApiSandbox.Model.Book, FirstApiSandbox, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2019-09-10 18:45:32,108 [7] INFO Microsoft.AspNetCore.Mvc.Infrastructure.ObjectResultExecutor - Executing ObjectResult, writing value of type 'System.String[]'.
+2019-09-10 18:45:32,278 [10] INFO Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker - Executed action FirstApiSandbox.Controllers.BookController.Get (FirstApiSandbox) in 289.2096ms
+2019-09-10 18:45:32,284 [7] INFO Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker - Executed action FirstApiSandbox.Controllers.ValuesController.Get (FirstApiSandbox) in 277.0362ms
+2019-09-10 18:45:32,294 [10] INFO Microsoft.AspNetCore.Routing.EndpointMiddleware - Executed endpoint 'FirstApiSandbox.Controllers.BookController.Get (FirstApiSandbox)'
+2019-09-10 18:45:32,310 [7] INFO Microsoft.AspNetCore.Routing.EndpointMiddleware - Executed endpoint 'FirstApiSandbox.Controllers.ValuesController.Get (FirstApiSandbox)'
+2019-09-10 18:45:32,317 [7] INFO FirstApiSandbox.Controllers.BookController - Request Logs!
+2019-09-10 18:45:32,318 [10] INFO FirstApiSandbox.Controllers.BookController - Request Logs!
+2019-09-10 18:45:32,435 [7] INFO Microsoft.AspNetCore.Hosting.Internal.WebHost - Request finished in 851.2497ms 200 application/json; charset=utf-8
+2019-09-10 18:45:32,561 [10] INFO Microsoft.AspNetCore.Hosting.Internal.WebHost - Request finished in 851.3148ms 200 application/json; charset=utf-8
+2019-09-10 18:45:38,325 [6] INFO Microsoft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 DELETE http://localhost:52774/api/Book/EmptyList  0
+2019-09-10 18:45:38,347 [6] INFO Microsoft.AspNetCore.Routing.EndpointMiddleware - Executing endpoint 'FirstApiSandbox.Controllers.BookController.Delete (FirstApiSandbox)'
+2019-09-10 18:45:38,395 [6] INFO Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker - Route matched with {action = "Delete", controller = "Book"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.ActionResult Delete(System.String) on controller FirstApiSandbox.Controllers.BookController (FirstApiSandbox).
+2019-09-10 18:45:38,448 [6] INFO Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker - Executing action method FirstApiSandbox.Controllers.BookController.Delete (FirstApiSandbox) - Validation state: Valid
+2019-09-10 18:45:38,465 [6] INFO Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker - Executed action method FirstApiSandbox.Controllers.BookController.Delete (FirstApiSandbox), returned result Microsoft.AspNetCore.Mvc.ObjectResult in 4.9952ms.
+2019-09-10 18:45:38,480 [6] INFO Microsoft.AspNetCore.Mvc.Infrastructure.ObjectResultExecutor - Executing ObjectResult, writing value of type 'System.String'.
+2019-09-10 18:45:38,493 [6] INFO Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker - Executed action FirstApiSandbox.Controllers.BookController.Delete (FirstApiSandbox) in 85.4674ms
+2019-09-10 18:45:38,500 [6] INFO Microsoft.AspNetCore.Routing.EndpointMiddleware - Executed endpoint 'FirstApiSandbox.Controllers.BookController.Delete (FirstApiSandbox)'
+2019-09-10 18:45:38,506 [6] INFO FirstApiSandbox.Controllers.BookController - Request Logs!
+2019-09-10 18:45:38,514 [6] INFO Microsoft.AspNetCore.Hosting.Internal.WebHost - Request finished in 411.0412ms 200 text/plain; charset=utf-8

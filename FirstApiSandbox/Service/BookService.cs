@@ -5,6 +5,7 @@ using System.Threading.Tasks;
 using FirstApiSandbox.Model;
 using FirstApiSandbox.Database;
 using FirstApiSandbox.Validation;
+using FluentValidation.Results;
 
 namespace FirstApiSandbox.Service
 {
@@ -32,8 +33,13 @@ namespace FirstApiSandbox.Service
         public Response AddBookUsingService(Book newBook)
         {
             Response response;
-            string validationCode = BookValidation.IsBookValid(newBook);
-            if (validationCode.Equals(Valid))
+
+            #region Experimenting Fluent Validation *Commented code*
+            BookValidation bookValidator = new BookValidation();
+            ValidationResult result = bookValidator.Validate(newBook);
+            //ruleSet: "MustNotBeEmpty"
+
+            if (result.IsValid)
             {
                 bookData.AddBookInDatabase(newBook);
                 var returnedBook = bookData.GetBooksFromDatabaseByName(newBook.Name);
@@ -42,36 +48,85 @@ namespace FirstApiSandbox.Service
             }
             else
             {
-                response = new Response(null, validationCode);
+                IList<ValidationFailure> validationFailureMessages = result.Errors;
+                response = new Response(validationFailureMessages);
                 return response;
             }
+            #endregion
+
+            #region Experimenting Without Fluent Validation *Commented code*
+            //string validationCode = BookValidation.IsBookValid(newBook);
+            //if (validationCode.Equals(Valid))
+            //{
+            //    bookData.AddBookInDatabase(newBook);
+            //    var returnedBook = bookData.GetBooksFromDatabaseByName(newBook.Name);
+            //    response = new Response(returnedBook, null);
+            //    return response;
+            //}
+            //else
+            //{
+            //    response = new Response(null, validationCode);
+            //    return response;
+            //}
+            #endregion
         }
 
         public Response UpdateBookUsingService(string name, Book newBook)
         {
             Response response;
-            string validationCode = BookValidation.IsBookValid(newBook);
-            if (validationCode.Equals(Valid))
+            if (BookValidation.IfQueriedBookNameExists(name))
             {
-                bookData.UpdateBookInDatabase(name, newBook);
-                Book returnedBook = bookData.GetBooksFromDatabaseByName(newBook.Name);
-                response = new Response(returnedBook, null);
-                return response;
+                BookValidation bookValidator = new BookValidation();
+                ValidationResult result = bookValidator.Validate(newBook);
+                //ruleSet: "MustNotBeEmpty"
+
+                if (result.IsValid)
+                {
+                    bookData.UpdateBookInDatabase(name, newBook);
+                    Book returnedBook = bookData.GetBooksFromDatabaseByName(newBook.Name);
+                    response = new Response(returnedBook, null);
+                    return response;
+                }
+                else
+                {
+                    IList<ValidationFailure> validationFailureMessages = result.Errors;
+                    response = new Response(validationFailureMessages);
+                    return response;
+                }
             }
             else
             {
-                response = new Response(null, validationCode);
+                response = new Response(null, Errors.NotFound);
                 return response;
             }
+
+            
+            #region Experimenting Without Fluent Validation *Commented code*
+            //string validationCode = BookValidation.IsBookValid(newBook);
+            //if (validationCode.Equals(Valid))
+            //{
+            //    bookData.UpdateBookInDatabase(name, newBook);
+            //    Book returnedBook = bookData.GetBooksFromDatabaseByName(newBook.Name);
+            //    response = new Response(returnedBook, null);
+            //    return response;
+            //}
+            //else
+            //{
+            //    response = new Response(null, validationCode);
+            //    return response;
+            //}
+            #endregion
         }
 
         public Response DeleteBookUsingService(string name)
         {
-            if (BookData.bookList.Where(iteratorBook => iteratorBook.Name.Equals(name)).FirstOrDefault() == null)
-                return new Response(null, Errors.NotFound);
+            //if (BookData.bookList.Where(iteratorBook => iteratorBook.Name.Equals(name)).FirstOrDefault() == null)
+            //    return new Response(null, Errors.NotFound);
 
             bookData.DeleteBookFromDatabase(name);
             return new Response(null, Errors.DeletionSuccessful);
+
+
         }
 
     }

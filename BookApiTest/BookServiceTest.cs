@@ -5,14 +5,15 @@ using FirstApiSandbox.Model;
 using System.Collections.Generic;
 using System.Linq;
 using System.Diagnostics;
+using FirstApiSandbox;
 
 namespace BookApiTest
 {
     public class BookServiceTest
     {
-        //GET TESTS
+        #region  GET_TESTS
         [Fact]
-        public void Get_books_from_service_should_return_empty_template_book()
+        public void GetBooksFromService_should_return_empty_template_book()
         {
             //Arrange
             IService bookService = new BookService();
@@ -21,14 +22,15 @@ namespace BookApiTest
             };
 
             //Act
-            List<Book> actualBookList = bookService.GetBooksfromService();
+            //List<Book> actualBookList = bookService.GetBooksfromService();
+            Response mockResponse = bookService.GetBooksfromService();
 
             //Assert
-            Assert.Equal(expectedBookList.ToString(), actualBookList.ToString());
+            Assert.Equal(expectedBookList.ToString(), mockResponse.ResponseBookList.ToString());
         }
 
         [Fact]
-        public void Get_books_from_service_by_name_should_return_book_by_given_name()
+        public void GetBooksFromServiceByName_should_return_book_by_given_name()
         {
             //Arrange
             IService bookService = new BookService();
@@ -37,16 +39,18 @@ namespace BookApiTest
                 new Book{ Name="Hunger", Genre="Fiction", Author="Suzanne Collins" }
             };
             Book expectedBook = expectedBookList[0];
-            
+
             //Act
-            Book actualBook = bookService.GetBookFromServiceByName(expectedBook.Name);
+            Response mockResponse = bookService.GetBookFromServiceByName(expectedBook.Name);
 
             //Assert
-            Assert.Equal(expectedBook?.ToString(), actualBook?.ToString());
+            Assert.Equal(expectedBook?.ToString(), mockResponse.Data?.ToString());
         }
+        #endregion
 
+        #region ADD_TESTS
         [Fact]
-        public void Add_book_from_service_should_add_book_to_bookList()
+        public void AddBookFromService_should_add_book_to_bookList()
         {
             //Arrange
             IService bookService = new BookService();
@@ -57,108 +61,222 @@ namespace BookApiTest
 
             //Act
             bookService.AddBookUsingService(new Book { Name = "RichDadPoorDad", Genre = "Lifestyle", Author = "Robert" });
-            List<Book> actualBookList = bookService.GetBooksfromService();
+            Response mockResponse = bookService.GetBooksfromService();
 
             //Assert
-            Assert.Equal(expectedBookList.ToString(), actualBookList.ToString());
+            Assert.Equal(expectedBookList.ToString(), mockResponse.ResponseBookList.ToString());
         }
 
-        //UPDATE TESTS
         [Fact]
-        public void Update_book_from_service_should_update_book_from_bookList()
+        public void AddBookFromService_should_return_corresponding_error_message_if_newBook_name_is_blank()
+        {
+            //Arrange
+            IService bookService = new BookService();
+            string expectedErrorMessage = "ERROR: Book name cannot be blank | Eg. The Subtle Art of Not Giving a f*ck";
+
+            //Act
+            Response mockResponse = bookService.AddBookUsingService(new Book { Name = "", Genre = "Lifestyle", Author = "Robert" });
+
+            //Assert
+            Assert.Equal(expectedErrorMessage, mockResponse.ErrorMessage.ToString());
+        }
+
+        [Fact]
+        public void AddBookFromService_should_return_corresponding_error_message_if_Author_name_contains_digits_or_special_chars()
+        {
+            //Arrange
+            IService bookService = new BookService();
+            string expectedErrorMessage = "ERROR: Author name cannot contain digits or special characters | Eg. John Doe"; ;
+
+            //Act
+            Response mockResponse = bookService.AddBookUsingService(new Book { Name = "SomeBook", Genre = "Lifestyle", Author = "Rob38945ert" });
+
+            //Assert
+            Assert.Equal(expectedErrorMessage, mockResponse.ErrorMessage);
+        }
+
+        [Fact]
+        public void AddBookFromService_should_return_corresponding_error_message_if_Author_name_is_blank()
+        {
+            //Arrange
+            IService bookService = new BookService();
+            string expectedErrorMessage = "ERROR: Author name cannot be blank | Eg. John Doe";
+
+            //Act
+            Response mockResponse = bookService.AddBookUsingService(new Book { Name = "SomeBook", Genre = "Lifestyle", Author = "" });
+
+            //Assert
+            Assert.Equal(expectedErrorMessage, mockResponse.ErrorMessage);
+        }
+
+        [Fact]
+        public void AddBookFromService_should_return_corresponding_error_message_if_genre_contains_digits_or_special_chars()
+        {
+            //Arrange
+            IService bookService = new BookService();
+            string expectedErrorMessage = "ERROR: Genre cannot contain digits or special characters | Eg. Non Fiction"; ;
+
+            //Act
+            Response mockResponse = bookService.AddBookUsingService(new Book { Name = "SomeBook", Genre = "Lif56estyle", Author = "Robert" });
+
+            //Assert
+            Assert.Equal(expectedErrorMessage, mockResponse.ErrorMessage);
+        }
+
+        [Fact]
+        public void AddBookFromService_should_return_corresponding_error_message_if_genre_is_blank()
+        {
+            //Arrange
+            IService bookService = new BookService();
+            string expectedErrorMessage = "ERROR: Genre cannot be blank | Eg. Non Fiction"; 
+
+            //Act
+            Response mockResponse = bookService.AddBookUsingService(new Book { Name = "SomeBook", Genre = "", Author = "Robert" });
+
+            //Assert
+            Assert.Equal(expectedErrorMessage, mockResponse.ErrorMessage);
+        }
+
+
+        #endregion
+
+        #region UPDATE_TESTS
+
+        [Fact]
+        public void UpdateBookUsingService_should_update_book_from_bookList()
         {
             //Arrange
             IService bookService = new BookService();
             List<Book> expectedBookList = new List<Book> {
-                new Book{ Name="EmptyList", Genre="NA", Author="NA" },
-                new Book{ Name = "HungerGames", Genre = "Fiction", Author = "Suzanne Collins" }
+                new Book{ Name="EmptyList", Genre="NA", Author="NA" }
             };
 
             //Act
-            bookService.UpdateBookUsingService("HungerGames", new Book { Name = "RichDadPoorDad", Genre = "Lifestyle", Author = "Robert" });
-            List<Book> actualBookList = bookService.GetBooksfromService();
+            bookService.UpdateBookUsingService("EmptyList", new Book { Name = "RichDadPoorDad", Genre = "Lifestyle", Author = "Robert" });
+            Response mockResponse = bookService.GetBooksfromService();
 
             //Assert
-            Assert.Equal(expectedBookList.ToString(), actualBookList.ToString());
+            Assert.Equal(expectedBookList.ToString(), mockResponse.ResponseBookList.ToString());
         }
 
         [Fact]
-        public void Update_book_from_service_should_return_false_is_invalid_book_is_passed()
+        public void UpdateBookUsingService_should_return_corresponding_error_message_if_newBook_name_is_invalid()
+        {
+            //Arrange
+            IService bookService = new BookService();
+            string expectedErrorMessage = "ERROR: Book name cannot be blank | Eg. The Subtle Art of Not Giving a f*ck"; ;
+
+            //Act
+            Response mockResponse = bookService.UpdateBookUsingService("Subtle Art of not giving a f*ck", new Book { Name = "", Genre = "Lifestyle", Author = "Robert" });
+
+            //Assert
+            Assert.Equal(expectedErrorMessage, mockResponse.ErrorMessage);
+        }
+
+        [Fact]
+        public void UpdateBookUsingService_should_return_corresponding_error_message_if_Author_name_contains_digits_or_special_chars()
+        {
+            //Arrange
+            IService bookService = new BookService();
+            string expectedErrorMessage = "ERROR: Author name cannot contain digits or special characters | Eg. John Doe";
+
+            //Act
+            Response mockResponse = bookService.UpdateBookUsingService("Subtle Art of not giving a f*ck", new Book { Name = "SomeBook", Genre = "Lifestyle", Author = "Robert45" });
+
+            //Assert
+            Assert.Equal(expectedErrorMessage, mockResponse.ErrorMessage);
+        }
+
+        [Fact]
+        public void UpdateBookUsingService_should_return_corresponding_error_message_if_Author_name_is_blank()
+        {
+            //Arrange
+            IService bookService = new BookService();
+            string expectedErrorMessage = "ERROR: Author name cannot be blank | Eg. John Doe";
+
+            //Act
+            Response mockResponse = bookService.UpdateBookUsingService("Subtle Art of not giving a f*ck", new Book { Name = "SomeBook", Genre = "Lifestyle", Author = "" });
+
+            //Assert
+            Assert.Equal(expectedErrorMessage, mockResponse.ErrorMessage);
+        }
+
+        [Fact]
+        public void UpdateBookUsingService_should_return_corresponding_error_message_if_genre_contains_digits_or_special_chars()
+        {
+            //Arrange
+            IService bookService = new BookService();
+            string expectedErrorMessage = "ERROR: Genre cannot contain digits or special characters | Eg. Non Fiction"; 
+
+            //Act
+            Response mockResponse = bookService.UpdateBookUsingService("Subtle Art of not giving a f*ck", new Book { Name = "SomeBook", Genre = "Lifestyle2039857", Author = "SomeAuthor" });
+
+            //Assert
+            Assert.Equal(expectedErrorMessage, mockResponse.ErrorMessage);
+        }
+
+        [Fact]
+        public void UpdateBookUsingService_should_return_corresponding_error_message_if_genre_is_blank()
+        {
+            //Arrange
+            IService bookService = new BookService();
+            string expectedErrorMessage = "ERROR: Genre cannot be blank | Eg. Non Fiction";
+
+            //Act
+            Response mockResponse = bookService.UpdateBookUsingService("Subtle Art of not giving a f*ck", new Book { Name = "SomeBook", Genre = "", Author = "SomeAuthor" });
+
+            //Assert
+            Assert.Equal(expectedErrorMessage, mockResponse.ErrorMessage);
+        }
+
+        //[Fact]
+        //public void UpdateBookUsingService_should_return_corresponding_error_message_if_searched_book_does_not_exists()
+        //{
+        //    //Arrange
+        //    IService bookService = new BookService();
+        //    string expectedErrorMessage = "ERROR 404: Book that you're looking for does not exist";
+
+        //    //Act
+        //    Response mockResponse = bookService.UpdateBookUsingService("SomeInvalidBook", new Book { Name = "SomeBook", Genre = "Lifestyle", Author = "SomeAuthor" });
+
+        //    //Assert
+        //    Assert.Equal(expectedErrorMessage, mockResponse.ErrorMessage);
+        //}
+
+        #endregion
+
+        #region DELETE_TESTS
+
+        [Fact]
+        public void DeleteBookUsingService_should_delete_book_from_bookList()
         {
             //Arrange
             IService bookService = new BookService();
             List<Book> expectedBookList = new List<Book> {
-                new Book{ Name="EmptyList", Genre="NA", Author="NA" },
-                new Book{ Name = "HungerGames", Genre = "Fiction", Author = "Suzanne Collins" }
-            };
-
-            //Assert
-            Assert.False(bookService.UpdateBookUsingService("Subtle Art of not giving a f*ck", new Book { Name = "RichDadPoorDad", Genre = "Lifestyle", Author = "Robert" }));
-        }
-
-        [Fact]
-        public void Update_book_from_service_should_return_false_if_name_is_blank()
-        {
-            //Arrange
-            IService bookService = new BookService();
-            List<Book> expectedBookList = new List<Book> {
-                new Book{ Name="EmptyList", Genre="NA", Author="NA" },
-                new Book{ Name = "HungerGames", Genre = "Fiction", Author = "Suzanne Collins" }
-            };
-
-            //Assert
-            Assert.False(bookService.UpdateBookUsingService("", new Book { Name = "RichDadPoorDad", Genre = "Lifestyle", Author = "Robert" }));
-        }
-
-
-        //DELETE TESTS
-        [Fact]
-        public void Delete_book_from_service_should_return_false_if_name_is_blank()
-        {
-            //Arrange
-            IService bookService = new BookService();
-            List<Book> expectedBookList = new List<Book> {
-                new Book{ Name="EmptyList", Genre="NA", Author="NA" },
-                new Book{ Name = "HungerGames", Genre = "Fiction", Author = "Suzanne Collins" }
-            };
-
-            //Assert
-            Assert.False(bookService.DeleteBookUsingService("HungerGames"));
-        }
-
-        [Fact]
-        public void Delete_book_from_service_should_delete_book_from_bookList()
-        {
-            //Arrange
-            IService bookService = new BookService();
-            List<Book> expectedBookList = new List<Book> {
-                new Book{ Name="EmptyList", Genre="NA", Author="NA" },
+                
             };
 
             //Act
-            bookService.AddBookUsingService(new Book { Name = "RichDadPoorDad", Genre = "Lifestyle", Author = "Robert" });
-            bookService.DeleteBookUsingService("RichDadPoorDad");
-            List<Book> actualBookList = bookService.GetBooksfromService();
+            bookService.DeleteBookUsingService("EmptyList");
+            Response mockResponse = bookService.GetBooksfromService();
 
             //Assert
-            Assert.Equal(expectedBookList.ToString(), actualBookList.ToString());
+            Assert.Equal(expectedBookList.ToString(), mockResponse.ResponseBookList.ToString());
         }
 
         [Fact]
-        public void Delete_book_from_service_should_return_false_if_name_is_invalid()
+        public void DeleteBookUsingService_should_return_NotFound_error_when_book_to_be_deleted_does_not_exist()
         {
             //Arrange
             IService bookService = new BookService();
-            List<Book> expectedBookList = new List<Book> {
-                new Book{ Name="EmptyList", Genre="NA", Author="NA" },
-                new Book{ Name = "HungerGames", Genre = "Fiction", Author = "Suzanne Collins" }
-            };
+            string expectedErrorMessage = "ERROR 404: Book that you're looking for does not exist";
+            //Act
+            Response mockResponse = bookService.DeleteBookUsingService("SomeInvalidBook");
 
             //Assert
-            Assert.False(bookService.DeleteBookUsingService("MonkWhoSoldHisFerrari"));
+            Assert.Equal(expectedErrorMessage, mockResponse.ErrorMessage);
         }
 
-
-
+        #endregion
     }
 }

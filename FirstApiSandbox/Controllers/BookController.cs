@@ -18,6 +18,7 @@ namespace FirstApiSandbox.Controllers
         [HttpGet]
         public ActionResult<List<Book>> Get()
         {
+            //log.Info("Get Logs!");
             Response response = bookService.GetBooksfromService();
             return Ok(response.ResponseBookList);
         }
@@ -26,6 +27,7 @@ namespace FirstApiSandbox.Controllers
         [HttpGet("{name}", Name = "Get")]
         public ActionResult<Book> Get(string name)
         {
+            //log.Info("GetByName Logs!");
             Response response = bookService.GetBookFromServiceByName(name);
             
             if (response.Data != null)
@@ -40,14 +42,15 @@ namespace FirstApiSandbox.Controllers
         [HttpPost]
         public ActionResult<Book> Post([FromBody] Book newBook)
         {
+            //log.Info("Post Logs!");
             Response response = bookService.AddBookUsingService(newBook);
 
             if (response.Data != null)
             {
-                return Ok(response.Data);
+                return StatusCode(200, response.Data);
             }
 
-            return NotFound(response.ErrorMessage);
+            return StatusCode(400, response.validationFailures);
             
         }
 
@@ -55,26 +58,39 @@ namespace FirstApiSandbox.Controllers
         [HttpPut("{name}")]
         public ActionResult<Book> Put(string name, [FromBody] Book newBook)
         {
-            Response response = bookService.UpdateBookUsingService(name, newBook);
-            if (response.Data != null)
+            Response response;
+            if(BookValidation.IfQueriedBookNameExists(name))
             {
-                return Ok(response.Data);
+                response = bookService.UpdateBookUsingService(name, newBook);
+                if (response.Data != null)
+                {
+                    return StatusCode(200, response.Data);
+                }
+                return StatusCode(400, response.validationFailures);
             }
-
-            return NotFound(response.ErrorMessage);
+            else
+            {
+                response = new Response(null, Errors.NotFound);
+                return StatusCode(404, response.ErrorMessage);
+            }
         }
 
         // DELETE: api/ApiWithActions/5
         [HttpDelete("{name}")]
         public ActionResult Delete(string name)
         {
-            Response response = bookService.DeleteBookUsingService(name);
+            Response response;
 
-            if (response.Data != null)
+            if (BookValidation.IfQueriedBookNameExists(name))
             {
-                return Ok(response.Data);
+                response = bookService.DeleteBookUsingService(name);
+                return StatusCode(200, Errors.DeletionSuccessful);
             }
-            return NotFound(response.ErrorMessage);
+            else
+            {
+                response = new Response(null, Errors.NotFound);
+                return StatusCode(404, response.ErrorMessage);
+            }
         }
     }
 }
