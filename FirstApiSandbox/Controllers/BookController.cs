@@ -12,14 +12,19 @@ namespace FirstApiSandbox.Controllers
     [ApiController]
     public class BookController : ControllerBase
     {
-        IService bookService = new BookService();
+        private IService _bookService;
 
+        public BookController(IService bookService)
+        {
+            _bookService = bookService;
+        }
+       
         // GET: api/Book
         [HttpGet]
         public ActionResult<List<Book>> Get()
         {
             //log.Info("Get Logs!");
-            Response response = bookService.GetBooksfromService();
+            Response response = _bookService.GetBooksfromService();
             return Ok(response.ResponseBookList);
         }
 
@@ -27,15 +32,21 @@ namespace FirstApiSandbox.Controllers
         [HttpGet("{name}", Name = "Get")]
         public ActionResult<Book> Get(string name)
         {
-            //log.Info("GetByName Logs!");
-            Response response = bookService.GetBookFromServiceByName(name);
-            
-            if (response.Data != null)
+            Response response;
+            if (BookValidation.IfQueriedBookNameExists(name))
             {
-                return Ok(response.Data);
+                response = _bookService.GetBookFromServiceByName(name);
+                if (response.Data != null)
+                {
+                    return StatusCode(200, response.Data);
+                }
+                return NotFound(response.validationFailures);
             }
-
-            return NotFound(response.ErrorMessage);
+            else
+            {
+                response = new Response(null, Errors.NotFound);
+                return StatusCode(404, response.ErrorMessage);
+            }
         }
 
         // POST: api/Book
@@ -43,7 +54,7 @@ namespace FirstApiSandbox.Controllers
         public ActionResult<Book> Post([FromBody] Book newBook)
         {
             //log.Info("Post Logs!");
-            Response response = bookService.AddBookUsingService(newBook);
+            Response response = _bookService.AddBookUsingService(newBook);
 
             if (response.Data != null)
             {
@@ -61,7 +72,7 @@ namespace FirstApiSandbox.Controllers
             Response response;
             if(BookValidation.IfQueriedBookNameExists(name))
             {
-                response = bookService.UpdateBookUsingService(name, newBook);
+                response = _bookService.UpdateBookUsingService(name, newBook);
                 if (response.Data != null)
                 {
                     return StatusCode(200, response.Data);
@@ -83,7 +94,7 @@ namespace FirstApiSandbox.Controllers
 
             if (BookValidation.IfQueriedBookNameExists(name))
             {
-                response = bookService.DeleteBookUsingService(name);
+                response = _bookService.DeleteBookUsingService(name);
                 return StatusCode(200, Errors.DeletionSuccessful);
             }
             else
@@ -91,6 +102,15 @@ namespace FirstApiSandbox.Controllers
                 response = new Response(null, Errors.NotFound);
                 return StatusCode(404, response.ErrorMessage);
             }
+        }
+
+        // GET: api/Book/Fiction
+        [Route("genre/{genreName}")]
+        [HttpGet]
+        public ActionResult GetUsingGenre(string genreName)
+        {
+            Response response = _bookService.GetBookByGenreUsingService(genreName);
+            return Ok(response.ResponseBookList);
         }
     }
 }

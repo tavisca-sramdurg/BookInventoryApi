@@ -13,5 +13,6 @@ namespace FirstApiSandbox.Service
         Response AddBookUsingService(Book newBook);
         Response UpdateBookUsingService(string name, Book newBook);
         Response DeleteBookUsingService(string name);
+        Response GetBookByGenreUsingService(string genreName);
     }
 }

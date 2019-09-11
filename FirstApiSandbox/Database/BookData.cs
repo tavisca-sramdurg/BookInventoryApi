@@ -7,8 +7,10 @@ using FirstApiSandbox.Model;
 
 namespace FirstApiSandbox.Database
 {
-    public class BookData
+    public class BookData : IBookDatabase
     {
+        
+
         public static List<Book> bookList = new List<Book> {
             new Book{ Name="EmptyList", Genre="NA", Author="NA" }
         };
@@ -20,10 +22,10 @@ namespace FirstApiSandbox.Database
 
         public Book GetBooksFromDatabaseByName(string name)
         {
-            Debug.WriteLine(name);
+            //Debug.WriteLine(name);
 
             var bookToBeReturned = bookList.Where(iteratorBook => iteratorBook.Name.Equals(name)).FirstOrDefault();
-            Debug.WriteLine(bookToBeReturned);
+            //Debug.WriteLine(bookToBeReturned);
             return bookToBeReturned;
         }
 
@@ -42,6 +44,17 @@ namespace FirstApiSandbox.Database
         public void DeleteBookFromDatabase(string name)
         {
             bookList.RemoveAt(bookList.IndexOf(bookList.Where(iteratorBook => iteratorBook.Name == name).FirstOrDefault()));
+        }
+
+        public List<Book> GetBooksByGenreFromDatabase(string genreName)
+        {
+            List<Book> bookListWithGenre = new List<Book>();
+            foreach (Book book in bookList)
+            {
+                if (book.Genre.Equals(genreName))
+                    bookListWithGenre.Add(book);
+            }
+            return bookListWithGenre;
         }
     }
 }

@@ -11,9 +11,14 @@ namespace FirstApiSandbox.Service
 {
     public class BookService : IService
     {
-        public const string Valid = "Valid book";
+        private IBookDatabase bookData;
+        public BookService(IBookDatabase bookDatabase)
+        {
+            bookData = bookDatabase;
+        }
 
-        BookData bookData = new BookData();
+        public const string Valid = "Valid book";
+        //BookData bookData = new BookData();
 
         public Response GetBooksfromService()
         {
@@ -120,13 +125,15 @@ namespace FirstApiSandbox.Service
 
         public Response DeleteBookUsingService(string name)
         {
-            //if (BookData.bookList.Where(iteratorBook => iteratorBook.Name.Equals(name)).FirstOrDefault() == null)
-            //    return new Response(null, Errors.NotFound);
-
             bookData.DeleteBookFromDatabase(name);
             return new Response(null, Errors.DeletionSuccessful);
+        }
 
-
+        public Response GetBookByGenreUsingService(string genreName)
+        {
+            var returnedBookList = bookData.GetBooksByGenreFromDatabase(genreName);
+            Response response = new Response(returnedBookList);
+            return response;
         }
 
     }
