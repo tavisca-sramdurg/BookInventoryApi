@@ -33,20 +33,12 @@ namespace FirstApiSandbox.Controllers
         public ActionResult<Book> Get(string name)
         {
             Response response;
-            if (BookValidation.IfQueriedBookNameExists(name))
+            response = _bookService.GetBookFromServiceByName(name);
+            if (response.Data != null)
             {
-                response = _bookService.GetBookFromServiceByName(name);
-                if (response.Data != null)
-                {
-                    return StatusCode(200, response.Data);
-                }
-                return NotFound(response.validationFailures);
+                return StatusCode(200, response.Data);
             }
-            else
-            {
-                response = new Response(null, Errors.NotFound);
-                return StatusCode(404, response.ErrorMessage);
-            }
+            return StatusCode(404, response.ErrorMessage);
         }
 
         // POST: api/Book
@@ -61,7 +53,7 @@ namespace FirstApiSandbox.Controllers
                 return StatusCode(200, response.Data);
             }
 
-            return StatusCode(400, response.validationFailures);
+            return StatusCode(400, response.ErrorMessage);
             
         }
 
@@ -70,20 +62,12 @@ namespace FirstApiSandbox.Controllers
         public ActionResult<Book> Put(string name, [FromBody] Book newBook)
         {
             Response response;
-            if(BookValidation.IfQueriedBookNameExists(name))
+            response = _bookService.UpdateBookUsingService(name, newBook);
+            if (response.Data != null)
             {
-                response = _bookService.UpdateBookUsingService(name, newBook);
-                if (response.Data != null)
-                {
-                    return StatusCode(200, response.Data);
-                }
-                return StatusCode(400, response.validationFailures);
+                return StatusCode(200, response.Data);
             }
-            else
-            {
-                response = new Response(null, Errors.NotFound);
-                return StatusCode(404, response.ErrorMessage);
-            }
+            return StatusCode(400, response.ErrorMessage); 
         }
 
         // DELETE: api/ApiWithActions/5
@@ -99,7 +83,7 @@ namespace FirstApiSandbox.Controllers
             }
             else
             {
-                response = new Response(null, Errors.NotFound);
+                response = new Response(Errors.NotFound);
                 return StatusCode(404, response.ErrorMessage);
             }
         }

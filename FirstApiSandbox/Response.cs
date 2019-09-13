@@ -13,17 +13,15 @@ namespace FirstApiSandbox
         public string ErrorMessage { get; set; } = null;
         public List<Book> ResponseBookList { get; set; } = null;
 
-        public IList<ValidationFailure> validationFailures { get; set; } = null;
 
-        public Response(Book book, string errorMessage)
+        public Response(string validationErrorMessage)
         {
-            Data = book;
-            ErrorMessage = errorMessage;
+            this.ErrorMessage = validationErrorMessage;
         }
 
-        public Response(IList<ValidationFailure> validationFailures)
+        public Response(Book book)
         {
-            this.validationFailures = validationFailures;
+            Data = book;
         }
 
         public Response(List<Book> bookList)
